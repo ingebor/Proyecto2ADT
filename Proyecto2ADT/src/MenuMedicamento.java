@@ -2,7 +2,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
-public class MenuPaciente {
+public class MenuMedicamento {
 
 	private JFrame frame;
 
@@ -10,14 +10,14 @@ public class MenuPaciente {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		MenuPaciente window = new MenuPaciente();
+		MenuMedicamento window = new MenuMedicamento();
 		window.frame.setVisible(true);
 	}
 
 	/**
 	 * Create the application.
 	 */
-	public MenuPaciente() {
+	public MenuMedicamento() {
 		initialize();
 	}
 

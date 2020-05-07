@@ -125,13 +125,20 @@ public class MenuInicial {
 		
 		btnIngSin = new JButton("Ingresar sintomas");
 		btnIngSin.setFont(new Font("Consolas", Font.PLAIN, 14));
-		btnIngSin.setBounds(124, 67, 169, 35);
+		btnIngSin.setBounds(117, 67, 190, 35);
 		pnlSintomas.add(btnIngSin);
+		btnIngSin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MenuSintomas sintomas = new MenuSintomas();
+				sintomas.newScreen();
+				frame.dispose();
+			}
+		});
 	}
 	
-	private class miListener implements ActionListener{
+	/*private class miListener implements ActionListener{
 		public void actionPerformed(ActionEvent e) {
 			
 		}
-	}
+	}*/
 }

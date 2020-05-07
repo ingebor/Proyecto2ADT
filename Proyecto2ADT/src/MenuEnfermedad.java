@@ -80,10 +80,6 @@ public class MenuEnfermedad {
 		btnRegEnf.setFont(new Font("Consolas", Font.PLAIN, 13));
 		btnRegEnf.setBounds(12, 412, 97, 25);
 		panel.add(btnRegEnf);
-		
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(22, 141, 301, 258);
-		panel.add(textArea);
 		btnRegEnf.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MenuInicial volver = new MenuInicial();
@@ -91,11 +87,16 @@ public class MenuEnfermedad {
 				frame.dispose();
 			}
 		});
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(22, 141, 301, 258);
+		panel.add(textArea);
+		
 	}
 	
-	private class miListener implements ActionListener{
+	/*private class miListener implements ActionListener{
 		public void actionPerformed(ActionEvent e) {
 			
 		}
-	}
+	}*/
 }

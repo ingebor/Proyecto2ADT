@@ -18,6 +18,7 @@ import javax.swing.JTextArea;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.JScrollBar;
+import javax.swing.border.BevelBorder;
 
 public class MenuEnfermedad {
 
@@ -49,37 +50,47 @@ public class MenuEnfermedad {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(224, 255, 255));
-		panel.setBorder(new TitledBorder(null, "Consultar enfermedades", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panel.setBackground(new Color(175, 238, 238));
 		frame.getContentPane().add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
-		JLabel lblSeleccioneUnaEnfermedad = new JLabel("Seleccione una enfermedad");
-		lblSeleccioneUnaEnfermedad.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
-		lblSeleccioneUnaEnfermedad.setBounds(12, 23, 212, 16);
-		panel.add(lblSeleccioneUnaEnfermedad);
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(224, 255, 255));
+		panel_1.setBorder(new TitledBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null), "Consultar Enfermedad", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		panel_1.setBounds(16, 13, 330, 424);
+		panel.add(panel_1);
+		panel_1.setLayout(null);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(12, 133, 306, 240);
+		panel_1.add(textArea);
+		
+		btnRegEnf = new JButton("Regresar");
+		btnRegEnf.setBounds(12, 386, 107, 25);
+		panel_1.add(btnRegEnf);
+		btnRegEnf.setFont(new Font("Consolas", Font.PLAIN, 13));
+		
+		JLabel lblLosSntomasSon = new JLabel("Los s\u00EDntomas son los siguientes: ");
+		lblLosSntomasSon.setBounds(12, 99, 221, 21);
+		panel_1.add(lblLosSntomasSon);
+		lblLosSntomasSon.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
+		
+		JButton btnListo = new JButton("Listo");
+		btnListo.setBounds(229, 65, 89, 25);
+		panel_1.add(btnListo);
+		btnListo.setFont(new Font("Consolas", Font.PLAIN, 13));
 		
 		JComboBox cmbSelecEnf = new JComboBox();
+		cmbSelecEnf.setBounds(22, 64, 76, 22);
+		panel_1.add(cmbSelecEnf);
 		cmbSelecEnf.setForeground(new Color(0, 0, 0));
 		cmbSelecEnf.setBackground(new Color(255, 255, 255));
 		cmbSelecEnf.setModel(new DefaultComboBoxModel(new String[] {"Gripe", "Tos", "Migrania"}));
-		cmbSelecEnf.setBounds(50, 56, 106, 22);
-		panel.add(cmbSelecEnf);
 		
-		JButton btnListo = new JButton("Listo");
-		btnListo.setFont(new Font("Consolas", Font.PLAIN, 13));
-		btnListo.setBounds(238, 57, 97, 25);
-		panel.add(btnListo);
-		
-		JLabel lblLosSntomasSon = new JLabel("Los s\u00EDntomas son los siguientes: ");
-		lblLosSntomasSon.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
-		lblLosSntomasSon.setBounds(12, 112, 260, 16);
-		panel.add(lblLosSntomasSon);
-		
-		btnRegEnf = new JButton("Regresar");
-		btnRegEnf.setFont(new Font("Consolas", Font.PLAIN, 13));
-		btnRegEnf.setBounds(12, 412, 97, 25);
-		panel.add(btnRegEnf);
+		JLabel lblSeleccioneUnaEnfermedad = new JLabel("Seleccione una enfermedad");
+		lblSeleccioneUnaEnfermedad.setBounds(12, 30, 184, 21);
+		panel_1.add(lblSeleccioneUnaEnfermedad);
+		lblSeleccioneUnaEnfermedad.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		btnRegEnf.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				MenuInicial volver = new MenuInicial();
@@ -87,10 +98,6 @@ public class MenuEnfermedad {
 				frame.dispose();
 			}
 		});
-		
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(22, 141, 301, 258);
-		panel.add(textArea);
 		
 	}
 	

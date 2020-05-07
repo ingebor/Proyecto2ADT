@@ -106,10 +106,17 @@ public class MenuInicial {
 		lblMed2.setBounds(165, 47, 133, 16);
 		pnlMedicamentos.add(lblMed2);
 		
-		btnConMed = new JButton("Consultar medicamentos");
+		btnConMed = new JButton("Descripcion de medicamentos");
 		btnConMed.setFont(new Font("Consolas", Font.PLAIN, 14));
-		btnConMed.setBounds(104, 88, 217, 35);
+		btnConMed.setBounds(78, 87, 283, 35);
 		pnlMedicamentos.add(btnConMed);
+		btnConMed.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MenuMedicamento medicamento = new MenuMedicamento();
+				medicamento.newScreen();
+				frame.dispose();
+			}
+		});
 		
 		JPanel pnlSintomas = new JPanel();
 		pnlSintomas.setBorder(new MatteBorder(1, 2, 2, 2, (Color) new Color(255, 160, 122)));

@@ -17,11 +17,14 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 
+@SuppressWarnings("unused")
 public class MenuMedicamento {
 
 	private JFrame frame;
 	private JButton btnAceptar;
 	private JButton btnRegresar;
+	private JTextArea txtaMostrarMed;
+
 
 	/**
 	 * Launch the application.
@@ -41,6 +44,7 @@ public class MenuMedicamento {
 	/**
 	 * Initialize the contents of the frame.
 	 */
+	@SuppressWarnings({ "unchecked", "rawtypes" , "static-access"})
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 469);
@@ -72,21 +76,24 @@ public class MenuMedicamento {
 		btnAceptar.setFont(new Font("Consolas", Font.PLAIN, 13));
 		btnAceptar.setBounds(265, 57, 97, 25);
 		pnlSelecMed.add(btnAceptar);
+		miListener oyente = new miListener();
+		btnAceptar.addActionListener(oyente);
 		
 		JLabel lblLasEspecificacionesSon = new JLabel("Las especificaciones son: ");
 		lblLasEspecificacionesSon.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		lblLasEspecificacionesSon.setBounds(12, 105, 182, 16);
 		pnlSelecMed.add(lblLasEspecificacionesSon);
 		
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(12, 134, 384, 196);
-		pnlSelecMed.add(textArea);
+		txtaMostrarMed = new JTextArea();
+		txtaMostrarMed.setBounds(12, 134, 384, 196);
+		pnlSelecMed.add(txtaMostrarMed);
 		
 		btnRegresar = new JButton("Regresar");
 		btnRegresar.setFont(new Font("Consolas", Font.PLAIN, 13));
 		btnRegresar.setBounds(12, 355, 97, 25);
 		pnlSelecMed.add(btnRegresar);
 		btnRegresar.addActionListener(new ActionListener() {
+			@SuppressWarnings("static-access")
 			public void actionPerformed(ActionEvent e) {
 				MenuInicial volver = new MenuInicial();
 				volver.main(null);
@@ -95,4 +102,11 @@ public class MenuMedicamento {
 		});
 	}
 
+	private class miListener implements ActionListener{
+		public void actionPerformed(ActionEvent e) {
+			if(e.getSource()==btnAceptar) {
+				txtaMostrarMed.setText("Alivia sintomas de las siguientes enfermedades: \nTos\nGripe\n\nLos sintomas que alivia son: \nFiebre\nDolor de cabeza\nCongestion nasal\nEstornudos\nDolor de garganta");
+			}
+		}
+	}
 }

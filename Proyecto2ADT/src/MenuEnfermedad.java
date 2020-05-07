@@ -20,11 +20,14 @@ import javax.swing.ScrollPaneConstants;
 import javax.swing.JScrollBar;
 import javax.swing.border.BevelBorder;
 
+@SuppressWarnings("unused")
 public class MenuEnfermedad {
 
 	private JFrame frame;
 	private static MenuEnfermedad window;
 	private JButton btnRegEnf;
+	private JButton btnListo;
+	private JTextArea txtaMostrarSin;
 
 	/**
 	 * Launch the application.
@@ -44,6 +47,7 @@ public class MenuEnfermedad {
 	/**
 	 * Initialize the contents of the frame.
 	 */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 376, 497);
@@ -61,9 +65,9 @@ public class MenuEnfermedad {
 		panel.add(panel_1);
 		panel_1.setLayout(null);
 		
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(12, 133, 306, 240);
-		panel_1.add(textArea);
+		txtaMostrarSin = new JTextArea();
+		txtaMostrarSin.setBounds(12, 133, 306, 240);
+		panel_1.add(txtaMostrarSin);
 		
 		btnRegEnf = new JButton("Regresar");
 		btnRegEnf.setBounds(12, 386, 107, 25);
@@ -75,10 +79,12 @@ public class MenuEnfermedad {
 		panel_1.add(lblLosSntomasSon);
 		lblLosSntomasSon.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		
-		JButton btnListo = new JButton("Listo");
+		btnListo = new JButton("Listo");
 		btnListo.setBounds(229, 65, 89, 25);
 		panel_1.add(btnListo);
 		btnListo.setFont(new Font("Consolas", Font.PLAIN, 13));
+		miListener oyente = new miListener();
+		btnListo.addActionListener(oyente);
 		
 		JComboBox cmbSelecEnf = new JComboBox();
 		cmbSelecEnf.setBounds(22, 64, 76, 22);
@@ -92,6 +98,7 @@ public class MenuEnfermedad {
 		panel_1.add(lblSeleccioneUnaEnfermedad);
 		lblSeleccioneUnaEnfermedad.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		btnRegEnf.addActionListener(new ActionListener() {
+			@SuppressWarnings("static-access")
 			public void actionPerformed(ActionEvent e) {
 				MenuInicial volver = new MenuInicial();
 				volver.main(null);
@@ -101,9 +108,11 @@ public class MenuEnfermedad {
 		
 	}
 	
-	/*private class miListener implements ActionListener{
+	private class miListener implements ActionListener{
 		public void actionPerformed(ActionEvent e) {
-			
+			if(e.getSource()==btnListo) {
+				txtaMostrarSin.setText("Los sintomas de la gripe son:\nDolor de cabeza\n\nRecomendacion de medicamento: \nAcetaminofen\nTe de jengibre con miel");
+			}
 		}
-	}*/
+	}
 }

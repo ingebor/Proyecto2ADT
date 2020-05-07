@@ -15,11 +15,13 @@ import javax.swing.JCheckBox;
 import javax.swing.JButton;
 import javax.swing.JTextArea;
 
+@SuppressWarnings("unused")
 public class MenuSintomas {
 
 	private JFrame frame;
 	private JButton btnAceptar;
 	private JButton btnRegresar;
+	private JTextArea txtaMostrarResul;
 
 	/**
 	 * Launch the application.
@@ -95,27 +97,37 @@ public class MenuSintomas {
 		btnAceptar.setFont(new Font("Consolas", Font.PLAIN, 13));
 		btnAceptar.setBounds(282, 277, 97, 25);
 		panel_1.add(btnAceptar);
+		miListener oyente = new miListener();
+		btnAceptar.addActionListener(oyente);
 		
 		JLabel lblResultado = new JLabel("Resultado:");
 		lblResultado.setFont(new Font("Comic Sans MS", Font.BOLD, 14));
 		lblResultado.setBounds(12, 327, 84, 16);
 		panel_1.add(lblResultado);
 		
-		JTextArea textArea = new JTextArea();
-		textArea.setLineWrap(true);
-		textArea.setBounds(12, 356, 384, 170);
-		panel_1.add(textArea);
+		txtaMostrarResul = new JTextArea();
+		txtaMostrarResul.setLineWrap(true);
+		txtaMostrarResul.setBounds(12, 356, 384, 170);
+		panel_1.add(txtaMostrarResul);
 		
 		btnRegresar = new JButton("Regresar");
 		btnRegresar.setFont(new Font("Consolas", Font.PLAIN, 13));
 		btnRegresar.setBounds(12, 548, 97, 25);
 		panel_1.add(btnRegresar);
 		btnRegresar.addActionListener(new ActionListener() {
+			@SuppressWarnings("static-access")
 			public void actionPerformed(ActionEvent e) {
 				MenuInicial volver = new MenuInicial();
 				volver.main(null);
 				frame.dispose();
 			}
 		});
+	}
+	private class miListener implements ActionListener{
+		public void actionPerformed(ActionEvent e) {
+			if(e.getSource()==btnAceptar) {
+				txtaMostrarResul.setText("Tiene una probabilidad de: \n58% \nDe tener la siguiente enfermedad: \nGripe");
+			}
+		}
 	}
 }

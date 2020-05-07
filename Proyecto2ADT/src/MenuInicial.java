@@ -13,6 +13,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 
+@SuppressWarnings({ "static-access", "unused" })
 public class MenuInicial {
 
 	private static MenuInicial window;

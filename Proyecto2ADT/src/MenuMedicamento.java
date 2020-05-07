@@ -9,7 +9,7 @@ public class MenuMedicamento {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void newScreen() {
 		MenuMedicamento window = new MenuMedicamento();
 		window.frame.setVisible(true);
 	}

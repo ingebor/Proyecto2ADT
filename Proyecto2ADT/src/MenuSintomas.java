@@ -9,7 +9,7 @@ public class MenuSintomas {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void newScreen() {
 		MenuSintomas window = new MenuSintomas();
 		window.frame.setVisible(true);
 	}

@@ -15,7 +15,16 @@ public class Medicina {
 		dosis = "";
 		notasAdicionales = "";
 	}
-		
+	
+	/**
+	 * 
+	 * @param nombre
+	 * @param precio
+	 * @param ingestion
+	 * @param tiposMedicina
+	 * @param dosis
+	 * @param notasAdicionales
+	 */
 	public Medicina(String nombre, double precio, String ingestion, String tiposMedicina, String dosis, String notasAdicionales) {
 		this.nombre = nombre;
 		this.precio = precio;

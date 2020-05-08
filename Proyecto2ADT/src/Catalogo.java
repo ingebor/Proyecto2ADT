@@ -71,5 +71,62 @@ public class Catalogo {
 			
 		}
 	}
+	
+	/**
+	 * @param nombreEnfermedad
+	 * @return cadena de atributos
+	 * Este metodo permite ingresar el nombre de la enfermedad y devuelve los atributos de dicha enfermedad con el toString de Enfermedad
+	 */
+	public String verEnfermedad(String nombreEnfermedad){
+		String mensaje = "";
+		for (int i = 0; i < listadoEnfermedades.size(); i++) {
+			try 
+			{
+				if(listadoEnfermedades.get(i).getNombre().toLowerCase().equals(nombreEnfermedad.toLowerCase()))
+				{
+					
+					mensaje = listadoEnfermedades.get(i).toString();
+				}
+			
+			}
+			catch(Exception e)
+			{
+				mensaje = "Lo sentimos, no se ha encontrado la enfermedad";
+			}
+			
+		}
+		if(mensaje.equals("")) {
+			mensaje = "Lo sentimos, no se ha encontrado la enfermedad";
+		}
+		return mensaje;	
+	}
+	
+	/**
+	 * Este metodo permite ingresar el nombre de la medicina y devuelve los atributos de dicha medicina con el toString de medicina
+	 * @param nombreMedicina El nombre de la medicina que se desea consultar
+	 * @return cadena de atributos de la medicina
+	 */
+	public String VerMedicina(String nombreMedicina) {
+		String mensaje = "";
+		for (int i = 0; i < listadoMedicinas.size(); i++) {
+			try 
+			{
+				if(listadoMedicinas.get(i).getNombre().toLowerCase().equals(nombreMedicina.toLowerCase()))
+				{
+					mensaje = listadoMedicinas.get(i).toString();
+				}
+				
+			}
+			catch(Exception e)
+			{
+				mensaje = "Lo sentimos, no se ha encontrado el medicamento.";
+			}
+			
+		}
+		if(mensaje.equals("")) {
+			mensaje = "Lo sentimos, no se ha encontrado el medicamento";
+		}
+		return mensaje;
+	}
 
 }

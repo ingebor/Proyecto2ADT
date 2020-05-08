@@ -51,6 +51,7 @@ public class Enfermedad {
 		
 		//dolor de cabeza
 		/**
+		* Metodo que devuelve el booleano de Dolor de cabeza
 		 * @return the dolorCabeza
 		 */
 		public boolean isDolorCabeza() {
@@ -65,6 +66,7 @@ public class Enfermedad {
 		
 		//dolor de estomago
 		/**
+		* Metodo que retorna un booleano del dolor de estomago
 		 * @return the dolorEstomago
 		 */
 		public boolean isDolorEstomago() {
@@ -79,6 +81,7 @@ public class Enfermedad {
 		
 		//vomito
 		/**
+		* Metodo de retorna un booleano de vomito
 		 * @return the vomito
 		 */
 		public boolean isVomito() {
@@ -86,6 +89,7 @@ public class Enfermedad {
 		}
 		/**
 		 * @param vomito the vomito to set
+		 * Devuelve un booleano que es vomito
 		 */
 		public void setVomito(boolean vomito) {
 			this.vomito = vomito;
@@ -93,6 +97,7 @@ public class Enfermedad {
 		
 		//diarrea
 		/**
+		* Devuelve booleano de diarrea
 		 * @return the diarrea
 		 */
 		public boolean isDiarrea() {
@@ -107,6 +112,7 @@ public class Enfermedad {
 		
 		//Estornudo
 		/**
+		Parametro que devuelve un booleano de estornudo
 		 * @return the estornudo
 		 */
 		public boolean isEstornudo() {
@@ -121,6 +127,7 @@ public class Enfermedad {
 		
 		//Tos
 		/**
+		* Parametro que devuelve un booleano de tos
 		 * @return the tos
 		 */
 		public boolean isTos() {
@@ -135,6 +142,7 @@ public class Enfermedad {
 		
 		//Dolor general
 		/**
+		* Parametro que devuelve un booleano de dolor general
 		 * @return the dolorGeneral
 		 */
 		public boolean isDolorGeneral() {
@@ -149,6 +157,7 @@ public class Enfermedad {
 		
 		//Falta de energias
 		/**
+		* Parametro que devuelve un booleano isFaltaEnergia
 		 * @return the faltaEnergia
 		 */
 		public boolean isFaltaEnergia() {

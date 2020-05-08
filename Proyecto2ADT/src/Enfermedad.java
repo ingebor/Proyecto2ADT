@@ -1,6 +1,18 @@
 
 public class Enfermedad {
-			nombre = "";
+	private String nombre;
+	private boolean dolorCabeza;
+	private boolean dolorEstomago;
+	private boolean vomito;
+	private boolean diarrea;
+	private boolean estornudo;
+	private boolean tos;
+	private boolean dolorGeneral;
+	private boolean faltaEnergia;
+	private String notasAdicionales;
+	
+	public Enfermedad() {
+		nombre = "";
 		dolorCabeza = false;
 		dolorEstomago = false;
 		vomito = false;
@@ -173,5 +185,7 @@ public class Enfermedad {
 		}
 		
 		
-
+		
+	
 }
+

@@ -21,6 +21,7 @@ public class MenuInicial {
 	private JButton btnIngSin;
 	private JButton btnConMed;
 	private JButton btnConEnf;
+	private Catalogo catalogo;
 
 	/**
 	 * Launch the application.
@@ -34,6 +35,7 @@ public class MenuInicial {
 	 * Create the application.
 	 */
 	public MenuInicial() {
+		catalogo = new Catalogo();
 		initialize();
 	}
 

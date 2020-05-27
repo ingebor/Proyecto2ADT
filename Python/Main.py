@@ -6,8 +6,12 @@ DictEnf = cb.Enfdict()
 listaEnf = cb.listEnf()
 dictMed = cb.Meddict()
 listaMed = cb.listMed()
-
-
+op = input("Ingrese un nombre: ")
+name = "'"+op+"'"
+#cb.agregarMed(name)
+#cb.agregarEnf(name)
+#cb.eliminarMed(name)
+#cb.eliminarEnf(name)
 flag = True
 print("---------------------")
 print("|    Bienvenido!    |")

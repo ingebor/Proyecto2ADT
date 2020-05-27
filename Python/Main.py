@@ -48,7 +48,20 @@ while flag:
                     illName = input("Ingrese el nombre de la enfermedad por favor: ")
                     if illName.lower() == "gripe" or illName.lower() == "tos" or illName.lower() == "diarrea":
                         print("Los sintomas son: ")
-                        userOp1 = False
+                        lastUserOp1 = True
+                        while lastUserOp1:
+                            inpUserOp1 = input("\nDesea:\n1. Regresar al menu anterior\n2. Salir del programa\n")
+                            if inpUserOp1 == "1":
+                                lastUserOp1 = False
+                                userOp1 = False
+                            elif inpUserOp1 == "2":
+                                print("\n¡Muchas gracias por utilizar el programa! Hasta la proxima")
+                                lastUserOp1 = False
+                                userOp1 = False
+                                flag2 = False
+                                flag = False
+                            else:
+                                print("\n----No ha ingresado un dato valido, intentelo de nuevo por favor----")
                     else:
                         print("Esta enfermedad no se encuentra en la base de datos, intentelo de nuevo por favor")
             elif opUser =="2":
@@ -57,11 +70,39 @@ while flag:
                     drugName = input("Ingrese el nombre del medicamento por favor: ")
                     if drugName.lower()=="tabcin" or drugName.lower()=="virogrip" or drugName.lower()=="peptobismol":
                         print("Las especificaciones del medicamento son: ")
-                        userOp2 = False
+                        lastUserOp2 = True
+                        while lastUserOp2:
+                            inpUserOp2 = input("\nDesea:\n1. Regresar al menu anterior\n2. Salir del programa\n")
+                            if inpUserOp2 == "1":
+                                lastUserOp2 = False
+                                userOp2 = False
+                            elif inpUserOp2 == "2":
+                                print("\n¡Muchas gracias por utilizar el programa! Hasta la proxima")
+                                lastUserOp2 = False
+                                userOp2 = False
+                                flag2 = False
+                                flag = False
+                            else:
+                                print("\n----No ha ingresado un dato valido, intentelo de nuevo por favor----")
                     else:
                         print("Este medicamento no se encuentra en la base de datos, intentelo de nuevo por favor")
             elif opUser=="3":
                 print("Verdadeo y falso a sintomas")
+                
+                lastUserOp3 = True
+                while lastUserOp3:
+                    inpUserOp3 = input("\nDesea:\n1. Regresar al menu anterior\n2. Salir del programa\n")
+                    if inpUserOp3 == "1":
+                        lastUserOp3 = False
+                        userOp3 = False
+                    elif inpUserOp3 == "2":
+                        print("\n¡Muchas gracias por utilizar el programa! Hasta la proxima")
+                        lastUserOp3 = False
+                        userOp3 = False
+                        flag2 = False
+                        flag = False
+                    else:
+                        print("\n----No ha ingresado un dato valido, intentelo de nuevo por favor----")
             elif opUser == "4":
                 flag2 = False
             elif opUser == "5":

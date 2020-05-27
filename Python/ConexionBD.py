@@ -70,13 +70,13 @@ def listMed():
         listaFinal.append(listaTemp)
     return listaFinal
     
-    
-
-
 #buscar enfermedad
-
+def BuscaEnf(nombre,dictionary):
+    print(dictionary[nombre])
 #buscar medicina
-
+def BuscaMed(nombre,dictionary):
+    print(dictionary[nombre])
+    
 #agregar medicina
 
 #agregar enfermedad

@@ -78,11 +78,16 @@ def BuscaMed(nombre,dictionary):
     print(dictionary[nombre])
     
 #agregar medicina
-
+def agregarMed(name):
+    graph.run("create (n:Medicina {name:"+name+"})")
 #agregar enfermedad
-
+def agregarEnf(name):
+    graph.run("create (n:Enfermedad {name:"+name+"})")
 #eliminar medicina
-
+def eliminarMed(name):
+    graph.run("match (n:Medicina {name:"+name+"}) delete n")
 #eliminar enfermedad
-
+def eliminarEnf(name):
+    graph.run("match (n:Enfermedad {name:"+name+"}) delete n")
 #recomendacion
+    

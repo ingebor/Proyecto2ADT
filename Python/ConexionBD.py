@@ -1,12 +1,12 @@
 from py2neo import Graph
 graph = Graph("http://neo4j:Andres9740@127.0.0.1:7474/db/data")
-
+#
 #llenar un diccionario de enfermedades
 def Enfdict():
     dit = {}
-    lista1 = []
     enf = graph.run("match (a:Enfermedad) Return a.name, a.Diarrea, a.DolorCabeza,a.DolorEstomago,a.Estornudo,a.DolorGeneral,a.FaltaEnergia").data()
     for lista in enf:
+        lista1 = []
         d = lista["a.Diarrea"]
         dc = lista["a.DolorCabeza"]
         de = lista["a.DolorEstomago"]
@@ -23,7 +23,23 @@ def Enfdict():
     return dit
         
 #llenar un diccionario de medicinas
-
+def Meddict():
+    dit = {}
+    med = graph.run("match (a:Medicina) return a.name,a.Precio,a.Ingestion,a.NotasAd,a.Enfermedad").data()
+    for di in med:
+        lista2 = []
+        p = di["a.Precio"]
+        I = di["a.Ingestion"]
+        Na = di["a.NotasAd"]
+        E = di["a.Enfermedad"]
+        lista2.append(p)
+        lista2.append(I)
+        lista2.append(Na)
+        lista2.append(E)
+        dit[di["a.name"]] = lista2
+    return dit
+        
+    
 #llenar una lista de enfermedades
 def listEnf():
     listaFinal = []
@@ -41,6 +57,21 @@ def listEnf():
     return listaFinal
 
 #llenar una lista de medicinas
+def listMed():
+    listaFinal = []
+    med = graph.run("match (a:Medicina) return a.name,a.Precio,a.Ingestion,a.NotasAd,a.Enfermedad").data()
+    for lista in med:
+        listaTemp = []
+        listaTemp.append(lista["a.name"])
+        listaTemp.append(lista["a.Precio"])
+        listaTemp.append(lista["a.Ingestion"])
+        listaTemp.append(lista["a.NotasAd"])
+        listaTemp.append(lista["a.Enfermedad"])
+        listaFinal.append(listaTemp)
+    return listaFinal
+    
+    
+
 
 #buscar enfermedad
 

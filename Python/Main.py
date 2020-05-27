@@ -1,3 +1,10 @@
+import ConexionBD as cb
+
+
+DictEnf = {}
+DictEnf = cb.Enfdict()
+
+
 flag = True
 print("---------------------")
 print("|    Bienvenido!    |")

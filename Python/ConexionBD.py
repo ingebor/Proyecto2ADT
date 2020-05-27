@@ -25,6 +25,20 @@ def Enfdict():
 #llenar un diccionario de medicinas
 
 #llenar una lista de enfermedades
+def listEnf():
+    listaFinal = []
+    enf = graph.run("match (a:Enfermedad) Return a.name, a.Diarrea, a.DolorCabeza,a.DolorEstomago,a.Estornudo,a.DolorGeneral,a.FaltaEnergia").data()
+    for lista in enf:
+        listaTemp = []
+        listaTemp.append(lista["a.name"])
+        listaTemp.append(lista["a.Diarrea"])
+        listaTemp.append(lista["a.DolorCabeza"])
+        listaTemp.append(lista["a.DolorEstomago"])
+        listaTemp.append(lista["a.Estornudo"])
+        listaTemp.append(lista["a.DolorGeneral"])
+        listaTemp.append(lista["a.FaltaEnergia"])
+        listaFinal.append(listaTemp)
+    return listaFinal
 
 #llenar una lista de medicinas
 

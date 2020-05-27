@@ -3,7 +3,7 @@ import ConexionBD as cb
 
 DictEnf = {}
 DictEnf = cb.Enfdict()
-
+listaEnf = cb.listEnf()
 
 flag = True
 print("---------------------")

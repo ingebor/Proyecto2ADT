@@ -4,6 +4,9 @@ import ConexionBD as cb
 DictEnf = {}
 DictEnf = cb.Enfdict()
 listaEnf = cb.listEnf()
+dictMed = cb.Meddict()
+listaMed = cb.listMed()
+
 
 flag = True
 print("---------------------")

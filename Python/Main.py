@@ -6,12 +6,16 @@ DictEnf = cb.Enfdict()
 listaEnf = cb.listEnf()
 dictMed = cb.Meddict()
 listaMed = cb.listMed()
+#print("recomendacion")
+#res = cb.Recomendacion("Si","Si","Si","Si","Si","No","Si","No",listaEnf)
+#print(res)
 #op = input("Ingrese un nombre: ")
 #name = "'"+op+"'"
 #cb.agregarMed(name)
 #cb.agregarEnf(name)
 #cb.eliminarMed(name)
 #cb.eliminarEnf(name)
+
 flag = True
 print("---------------------")
 print("|    Bienvenido!    |")
@@ -30,16 +34,45 @@ while flag:
                     if password == "proyectoADT":
                         flagMenuAdmin = True
                         while flagMenuAdmin:
-                            opAdmin = input("\n¿Que desea realizar?\n1. Agregar un medicamento\n2. Agregar una enfermedad\n3. Regresar al menu anterior\n4. Salir del programa\n")
+                            opAdmin = input("\n¿Que desea realizar?\n1. Agregar un medicamento\n2. Agregar una enfermedad\n3.Eliminar un medicamento \n4. Eliminar una enfermedad\n5. Regresar al menu anterior\n6. Salir del programa\n")
                             if opAdmin=="1":
-                                print("Ingresar un medicamento")
+                                Medicamento = input("Ingrese el nombre del medicamento: ")
+                                med = "'"+Medicamento+"'"
+                                try:
+                                    cb.agregarMed(med)
+                                    print("Se ha cargado correctamente")
+                                except:
+                                    print("Ha ingresado algo incorrecto")
                             elif opAdmin=="2":
-                                print("Agregar una enfermedad")
-                            elif opAdmin == "3":
+                                Enfermedad = input("Ingrese el nombre de la enfermedad: ")
+                                enfer = "'"+Enfermedad+"'"
+                                try:
+                                    cb.agregarEnf(enfer)
+                                    print("Se ha cargado correctamente")
+                                except:
+                                    print("Ha ingresado algo incorrecto")
+                            elif opAdmin=="3":
+                                drug = input("Ingrese el nombre del medicamento que desea borrar: ")
+                                deleteDrug = "'"+drug+"'"
+                                try:
+                                    cb.eliminarMed(deleteDrug)
+                                    print("Se ha eliminado correctamente")
+                                except:
+                                    print("Ha ingresado algo incorrecto")
+                            elif opAdmin=="4":
+                                Enfermedads = input("ingrese el nombre de la enfermedad que desea borrar: ")
+                                deleteEnf = "'"+Enfermedads+"'"
+                                try:
+                                    cb.eliminarEnf(deleteEnf)
+                                    print("Se ha eliminado correcto")
+                                except:
+                                    print("Ha ingresado algo incorrecto")
+                                
+                            elif opAdmin == "5":
                                 flagMenuAdmin = False
                                 flagUserName = False
                                 flagAdmin = False
-                            elif opAdmin=="4":
+                            elif opAdmin=="6":
                                 print("¡Muchas gracias por utilizar el programa! Hasta la proxima")
                                 flagMenuAdmin = False
                                 flagUserName = False
@@ -60,8 +93,9 @@ while flag:
                 userOp1 = True
                 while userOp1:
                     illName = input("Ingrese el nombre de la enfermedad por favor: ")
-                    if illName.lower() == "gripe" or illName.lower() == "tos" or illName.lower() == "diarrea":
+                    try:
                         print("Los sintomas son: ")
+                        cb.BuscaEnf(illName,DictEnf)
                         lastUserOp1 = True
                         while lastUserOp1:
                             inpUserOp1 = input("\nDesea:\n1. Regresar al menu anterior\n2. Salir del programa\n")
@@ -76,14 +110,15 @@ while flag:
                                 flag = False
                             else:
                                 print("\n----No ha ingresado un dato valido, intentelo de nuevo por favor----")
-                    else:
-                        print("Esta enfermedad no se encuentra en la base de datos, intentelo de nuevo por favor")
+                    except:
+                        print("No se ha encontrado la enfermedad :(")
             elif opUser =="2":
                 userOp2 = True
                 while userOp2:
                     drugName = input("Ingrese el nombre del medicamento por favor: ")
-                    if drugName.lower()=="tabcin" or drugName.lower()=="virogrip" or drugName.lower()=="peptobismol":
+                    try:
                         print("Las especificaciones del medicamento son: ")
+                        cb.BuscaMed(drugName,dictMed)
                         lastUserOp2 = True
                         while lastUserOp2:
                             inpUserOp2 = input("\nDesea:\n1. Regresar al menu anterior\n2. Salir del programa\n")
@@ -98,10 +133,20 @@ while flag:
                                 flag = False
                             else:
                                 print("\n----No ha ingresado un dato valido, intentelo de nuevo por favor----")
-                    else:
+                    except:
                         print("Este medicamento no se encuentra en la base de datos, intentelo de nuevo por favor")
             elif opUser=="3":
-                print("Verdadeo y falso a sintomas")
+                print("De los siguientes sintomás responda: Si y No dependiendo si cuenta con ellos")
+                diarrea = input("Diarrea: \n->")
+                DolorCabeza  = input("Dolor de cabeza: \n->")
+                DolorEstomago = input("Dolor de estomago: \n->")
+                Estornudo = input("Tiene congestion nasal: \n->")
+                DolorGeneral = input("Siente dolor General: \n->")
+                FaltaEnergia = input("Se siente cansado y sin energia?: \n->")
+                Tos = input("Tiene tos?: \n->")
+                Vomito = input("ha tenido episodios de nauseas y vomito?: \n->")
+                res = cb.Recomendacion(diarrea,DolorCabeza,DolorEstomago,Estornudo,DolorGeneral,FaltaEnergia,Tos,Vomito,listaEnf)
+                print(res)
                 
                 lastUserOp3 = True
                 while lastUserOp3:

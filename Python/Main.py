@@ -3,9 +3,13 @@ import ConexionBD as cb
 
 DictEnf = {}
 DictEnf = cb.Enfdict()
+#print(DictEnf)
 listaEnf = cb.listEnf()
+#print(listaEnf)
 dictMed = cb.Meddict()
+#print(dictMed)
 listaMed = cb.listMed()
+#print(listaMed)
 #print("recomendacion")
 #res = cb.Recomendacion("Si","Si","Si","Si","Si","No","Si","No",listaEnf)
 #print(res)

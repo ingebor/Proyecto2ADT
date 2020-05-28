@@ -1,5 +1,5 @@
 from py2neo import Graph
-graph = Graph("http://neo4j:Andres9740@127.0.0.1:7474/db/data")
+graph = Graph("http://neo4j:proyectoADT@127.0.0.1:7474/db/data")
 #
 #llenar un diccionario de enfermedades
 def Enfdict():
@@ -117,7 +117,7 @@ def Recomendacion(Diarrea,DolorCabeza,DolorEstomago,Estornudo,DolorGeneral,Falta
             contador += 1
         if Vomito == lista[8]:
             contador += 1
-        if contador >= 3:
+        if contador >= 6:
             prob = ((contador/8)*100)-1
             probF = str(prob)
             mensaje += "\n" + lista[0] + " Con una Probabilidad de " + probF + "%"

@@ -349,3 +349,5 @@ match (a:Enfermedad {Nombre:"Varicela"}),(b:Enfermedad {Nombre:"Paperas"}) merge
 match (a:Enfermedad {Nombre:"Covid-19"}),(b:Enfermedad {Nombre:"Rotavirus"}) merge (a)-[r:DolorCabeza]-(b)
 match (a:Enfermedad {Nombre:"Covid-19"}),(b:Enfermedad {Nombre:"Paperas"}) merge (a)-[r:DolorCabeza]-(b)
 match (a:Enfermedad {Nombre:"Rotavirus"}),(b:Enfermedad {Nombre:"Paperas"}) merge (a)-[r:DolorCabeza]-(b)
+match (n:Enfermedad {Nombre:"Gastritis"}) remove n.Medicia
+match (n:Enfermedad {Nombre:"Gastritis"}) set n.Medicina="Penicilina"

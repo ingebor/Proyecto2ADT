@@ -4,7 +4,7 @@ graph = Graph("http://neo4j:proyectoADT@127.0.0.1:7474/db/data")
 #llenar un diccionario de enfermedades
 def Enfdict():
     dit = {}
-    enf = graph.run("match (a:Enfermedad) Return a.Nombre, a.Diarrea, a.DolorCabeza,a.DolorEstomago,a.Estornudo,a.DolorGeneral,a.FaltaEnergia,a.Tos,a.Vomito").data()
+    enf = graph.run("match (a:Enfermedad) Return a.Nombre, a.Diarrea, a.DolorCabeza,a.DolorEstomago,a.Estornudo,a.DolorGeneral,a.FaltaEnergia,a.Tos,a.Vomito,a.Medicina,a.NotasAD,a.Natural").data()
     for lista in enf:
         lista1 = []
         d = lista["a.Diarrea"]
@@ -15,6 +15,9 @@ def Enfdict():
         fe = lista["a.FaltaEnergia"]
         t = lista["a.Tos"]
         v = lista["a.Vomito"]
+        Me = lista["a.Medicina"]
+        Na = lista["a.NotasAD"]
+        nat = lista["a.Natural"]
         lista1.append(d)
         lista1.append(dc)
         lista1.append(de)
@@ -23,6 +26,9 @@ def Enfdict():
         lista1.append(fe)
         lista1.append(t)
         lista1.append(v)
+        lista1.append(Me)
+        lista1.append(Na)
+        lista1.append(nat)
         dit[lista["a.Nombre"]] = lista1
     return dit
         

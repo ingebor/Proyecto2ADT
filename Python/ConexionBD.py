@@ -4,7 +4,7 @@ graph = Graph("http://neo4j:Andres9740@127.0.0.1:7474/db/data")
 #llenar un diccionario de enfermedades
 def Enfdict():
     dit = {}
-    enf = graph.run("match (a:Enfermedad) Return a.name, a.Diarrea, a.DolorCabeza,a.DolorEstomago,a.Estornudo,a.DolorGeneral,a.FaltaEnergia,a.Tos,a.Vomito").data()
+    enf = graph.run("match (a:Enfermedad) Return a.Nombre, a.Diarrea, a.DolorCabeza,a.DolorEstomago,a.Estornudo,a.DolorGeneral,a.FaltaEnergia,a.Tos,a.Vomito").data()
     for lista in enf:
         lista1 = []
         d = lista["a.Diarrea"]
@@ -23,34 +23,34 @@ def Enfdict():
         lista1.append(fe)
         lista1.append(t)
         lista1.append(v)
-        dit[lista["a.name"]] = lista1
+        dit[lista["a.Nombre"]] = lista1
     return dit
         
 #llenar un diccionario de medicinas
 def Meddict():
     dit = {}
-    med = graph.run("match (a:Medicina) return a.name,a.Precio,a.Ingestion,a.NotasAd,a.Enfermedad").data()
+    med = graph.run("match (a:Medicina) return a.Nombre,a.Precio,a.Ingestion,a.NotasAD,a.Enfermedad").data()
     for di in med:
         lista2 = []
         p = di["a.Precio"]
         I = di["a.Ingestion"]
-        Na = di["a.NotasAd"]
+        Na = di["a.NotasAD"]
         E = di["a.Enfermedad"]
         lista2.append(p)
         lista2.append(I)
         lista2.append(Na)
         lista2.append(E)
-        dit[di["a.name"]] = lista2
+        dit[di["a.Nombre"]] = lista2
     return dit
         
     
 #llenar una lista de enfermedades
 def listEnf():
     listaFinal = []
-    enf = graph.run("match (a:Enfermedad) Return a.name, a.Diarrea, a.DolorCabeza,a.DolorEstomago,a.Estornudo,a.DolorGeneral,a.FaltaEnergia,a.Tos,a.Vomito").data()
+    enf = graph.run("match (a:Enfermedad) Return a.Nombre, a.Diarrea, a.DolorCabeza,a.DolorEstomago,a.Estornudo,a.DolorGeneral,a.FaltaEnergia,a.Tos,a.Vomito").data()
     for lista in enf:
         listaTemp = []
-        listaTemp.append(lista["a.name"])
+        listaTemp.append(lista["a.Nombre"])
         listaTemp.append(lista["a.Diarrea"])
         listaTemp.append(lista["a.DolorCabeza"])
         listaTemp.append(lista["a.DolorEstomago"])
@@ -65,13 +65,13 @@ def listEnf():
 #llenar una lista de medicinas
 def listMed():
     listaFinal = []
-    med = graph.run("match (a:Medicina) return a.name,a.Precio,a.Ingestion,a.NotasAd,a.Enfermedad").data()
+    med = graph.run("match (a:Medicina) return a.Nombre,a.Precio,a.Ingestion,a.NotasAD,a.Enfermedad").data()
     for lista in med:
         listaTemp = []
-        listaTemp.append(lista["a.name"])
+        listaTemp.append(lista["a.Nombre"])
         listaTemp.append(lista["a.Precio"])
         listaTemp.append(lista["a.Ingestion"])
-        listaTemp.append(lista["a.NotasAd"])
+        listaTemp.append(lista["a.NotasAD"])
         listaTemp.append(lista["a.Enfermedad"])
         listaFinal.append(listaTemp)
     return listaFinal

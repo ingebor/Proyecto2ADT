@@ -1,10 +1,13 @@
 from py2neo import Graph
-graph = Graph("http://neo4j:Andres9740@127.0.0.1:7474/db/data")
+graph = Graph("http://neo4j:proyectoADT@127.0.0.1:7474/db/data")
 #
 #llenar un diccionario de enfermedades
 def Enfdict():
     dit = {}
+
     enf = graph.run("match (a:Enfermedad) Return a.Nombre, a.Diarrea, a.DolorCabeza,a.DolorEstomago,a.Estornudo,a.DolorGeneral,a.FaltaEnergia,a.Tos,a.Vomito,a.Medicina,a.NotasAD").data()
+
+    enf = graph.run("match (a:Enfermedad) Return a.Nombre, a.Diarrea, a.DolorCabeza,a.DolorEstomago,a.Estornudo,a.DolorGeneral,a.FaltaEnergia,a.Tos,a.Vomito,a.Medicina,a.NotasAD,a.Natural").data()
     for lista in enf:
         lista1 = []
         d = lista["a.Diarrea"]
@@ -17,6 +20,7 @@ def Enfdict():
         v = lista["a.Vomito"]
         Me = lista["a.Medicina"]
         Na = lista["a.NotasAD"]
+        nat = lista["a.Natural"]
         lista1.append(d)
         lista1.append(dc)
         lista1.append(de)
@@ -27,6 +31,7 @@ def Enfdict():
         lista1.append(v)
         lista1.append(Me)
         lista1.append(Na)
+        lista1.append(nat)
         dit[lista["a.Nombre"]] = lista1
     return dit
         
@@ -121,7 +126,7 @@ def Recomendacion(Diarrea,DolorCabeza,DolorEstomago,Estornudo,DolorGeneral,Falta
             contador += 1
         if Vomito == lista[8]:
             contador += 1
-        if contador >= 3:
+        if contador >= 6:
             prob = ((contador/8)*100)-1
             probF = str(prob)
             mensaje += "\n" + lista[0] + " Con una Probabilidad de " + probF + "%"

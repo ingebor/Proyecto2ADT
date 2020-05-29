@@ -38,7 +38,7 @@ while flag:
                     if password == "proyectoADT":
                         flagMenuAdmin = True
                         while flagMenuAdmin:
-                            opAdmin = input("\n¿Que desea realizar?\n1. Agregar un medicamento\n2. Agregar una enfermedad\n3.Eliminar un medicamento \n4. Eliminar una enfermedad\n5. Regresar al menu anterior\n6. Salir del programa\n")
+                            opAdmin = input("\n¿Que desea realizar?\n1. Agregar un medicamento\n2. Agregar una enfermedad\n3. Eliminar un medicamento \n4. Eliminar una enfermedad\n5. Regresar al menu anterior\n6. Salir del programa\n")
                             if opAdmin=="1":
                                 Medicamento = input("Ingrese el nombre del medicamento: ")
                                 med = "'"+Medicamento+"'"

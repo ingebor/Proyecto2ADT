@@ -117,6 +117,14 @@ def deleteR(op1,op2,name1,name2,relacion):
 def deleteA(nodo,nombre,atributo):
     graph.run("match (n:"+nodo+" {Nombre:"+nombre+"}) remove n."+atributo+"").data()
 #recomendacion
+#agregar todos los nodos y relaciones a unsa base de datos vacia
+def addAll():
+    f = open("lista.txt", "r")
+    for x in f:
+        graph.run(""+x+"").data()
+    f.close()
+    
+    
 #Diarrea,DolorCabeza,DolorEstomago,Estornudo,DolorGeneral,FaltaEnergia,Tos,Vomito,
 def Recomendacion(Diarrea,DolorCabeza,DolorEstomago,Estornudo,DolorGeneral,FaltaEnergia,Tos,Vomito,listaEnf):
     mensaje = "puede tener:"

@@ -442,3 +442,15 @@ match (a:Enfermedad {Nombre:"Varicela"}),(b:Enfermedad {Nombre:"Paperas"}) merge
 match (a:Enfermedad {Nombre:"Covid-19"}),(b:Enfermedad {Nombre:"Rotavirus"}) merge (a)-[r:FaltaEnergia]-(b)
 match (a:Enfermedad {Nombre:"Covid-19"}),(b:Enfermedad {Nombre:"Paperas"}) merge (a)-[r:FaltaEnergia]-(b)
 match (a:Enfermedad {Nombre:"Rotavirus"}),(b:Enfermedad {Nombre:"Paperas"}) merge (a)-[r:FaltaEnergia]-(b)
+match(n:Medicina {Nombre:"Tabcin"}) set n.Precio="Q33.15"
+match(n:Medicina {Nombre:"Tabcin"}) set n.Ingestion="1 capsula cada 8 hrs, sin exceder a tres capsulas. Mientras persistan los sintomas"
+match(n:Medicina {Nombre:"Loperamida"}) set n.Precio="Q11.55"
+match(n:Medicina {Nombre:"Loperamida"}) set n.Ingestion="2 capsulas en una sola toma, posteriormente tomar una capsula luego de cada deposicion diarreica"
+match(n:Medicina {Nombre:"Penicilina"}) set n.Precio="Q29.48"
+match(n:Medicina {Nombre:"Penicilina"}) set n.Ingestion="1 sola inyeccion de 8-15 dias"
+match(n:Medicina {Nombre:"Allegra"}) set n.Precio="Q437.11"
+match(n:Medicina {Nombre:"Allegra"}) set n.Ingestion="10 mg una vez al dia como 10 ml de solucion oral. 2 cucharadas completas"
+match(n:Medicina {Nombre:"Tylenol"}) set n.Precio="Q23.97"
+match(n:Medicina {Nombre:"Tylenol"}) set n.Ingestion="1 tableta cada 4-6 hrs por un aprox. de 4 dias"
+match(n:Medicina {Nombre:"Paracetamol"}) set n.Precio="Q36.04"
+match(n:Medicina {Nombre:"Paracetamol"}) set n.Ingestion="Una tableta cada 4-6 hrs hasta ya no padecer los sintomas"

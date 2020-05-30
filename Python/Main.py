@@ -1,25 +1,14 @@
+#Universidad del Valle de Guatemala
+#Proyecto No. 2, sistema de recomendacion. Algoritmos y estructura de datos
+#Andres Say 19705, Ayleen Rubio 19003, 19214
 import ConexionBD as cb
 
-#cb.adAll()
 
 DictEnf = {}
 DictEnf = cb.Enfdict()
-#print(DictEnf)
 listaEnf = cb.listEnf()
-#print(listaEnf)
 dictMed = cb.Meddict()
-#print(dictMed)
 listaMed = cb.listMed()
-#print(listaMed)
-#print("recomendacion")
-#res = cb.Recomendacion("Si","Si","Si","Si","Si","No","Si","No",listaEnf)
-#print(res)
-#op = input("Ingrese un nombre: ")
-#name = "'"+op+"'"
-#cb.agregarMed(name)
-#cb.agregarEnf(name)
-#cb.eliminarMed(name)
-#cb.eliminarEnf(name)
 
 
 
@@ -230,14 +219,14 @@ while flag:
                         print("\n--Este medicamento no se encuentra en la base de datos, lo sentimos. Intentelo de nuevo por favor--\n")
             elif opUser=="3":
                 print("De los siguientes sintomas responda: Si y No, dependiendo si cuenta con ellos o no\n")
-                diarrea = input("Diarrea: \n->")
-                DolorCabeza  = input("Dolor de cabeza: \n->")
-                DolorEstomago = input("Dolor de estomago: \n->")
-                Estornudo = input("Congestion nasal: \n->")
-                DolorGeneral = input("Dolor General: \n->")
-                FaltaEnergia = input("Cansado y poca energia: \n->")
-                Tos = input("Tos: \n->")
-                Vomito = input("Episodios de nauseas y vomito: \n->")
+                diarrea = input("Diarrea: \n->").capitalize()
+                DolorCabeza  = input("Dolor de cabeza: \n->").capitalize()
+                DolorEstomago = input("Dolor de estomago: \n->").capitalize()
+                Estornudo = input("Congestion nasal: \n->").capitalize()
+                DolorGeneral = input("Dolor General: \n->").capitalize()
+                FaltaEnergia = input("Cansancio y poca energia: \n->").capitalize()
+                Tos = input("Tos: \n->").capitalize()
+                Vomito = input("Episodios de nauseas y vomito: \n->").capitalize()
                 res = cb.Recomendacion(diarrea,DolorCabeza,DolorEstomago,Estornudo,DolorGeneral,FaltaEnergia,Tos,Vomito,listaEnf)
                 print(res)
                 

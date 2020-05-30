@@ -34,15 +34,17 @@ while inicio:
         print("Esto puede tardar unos segundos, espere por favor")
         cb.addAll()
         print("\nListo!")
-        flag = True
+        print("Inicie el programa de nuevo por favor")
+        flag = False
         inicio = False
     elif inicial == "2":
         flag = True
         inicio = False
     else:
         print("\n----No ha ingresado un dato valido, intentelo de nuevo por favor----")
-print("\n¿Que desea realizar a continuacion?")
+
 while flag:
+    print("\n¿Que desea realizar a continuacion?")
     option1=input("Desea ingresar como: \n1. Administrador\n2. Paciente\n3. Salir del programa\n")
     if option1=="1":
         flagAdmin = True

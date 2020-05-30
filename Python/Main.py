@@ -23,11 +23,23 @@ listaMed = cb.listMed()
 
 
 
-flag = True
+flag = False
 print("---------------------")
 print("|    Bienvenido!    |")
 print("---------------------")
-print("¿Que desea realizar a continuacion?")
+inicio = True
+while inicio:
+    inicial = input("\nSeleccionar una opcion: \n1. Llenar base de datos y continuar\n2. Unicamente continuar\n**Advertencia** Si su base de datos no se encuentra llena, no podra utilizar el programa apropiadamente\n")
+    if inicial=="1":
+        cb.adAll()
+        flag = True
+        inicio = False
+    elif inicial == "2":
+        flag = True
+        inicio = False
+    else:
+        print("\n----No ha ingresado un dato valido, intentelo de nuevo por favor----")
+print("\n¿Que desea realizar a continuacion?")
 while flag:
     option1=input("Desea ingresar como: \n1. Administrador\n2. Paciente\n3. Salir del programa\n")
     if option1=="1":
@@ -41,39 +53,39 @@ while flag:
                     if password == "proyectoADT":
                         flagMenuAdmin = True
                         while flagMenuAdmin:
-                            opAdmin = input("\n¿Que desea realizar?\n1. Agregar un medicamento\n2. Agregar una enfermedad\n3. Eliminar un medicamento \n4. Eliminar una enfermedad\n5.Agregar una relacion \n6. Agregar un atributo \n7.eliminar una relacion \n8.eliminar un atributo\n9. Regresar al menu anterior\n10. Salir del programa\n")
+                            opAdmin = input("\n¿Que desea realizar?\n1. Agregar un medicamento\n2. Agregar una enfermedad\n3. Eliminar un medicamento \n4. Eliminar una enfermedad\n5. Agregar una relacion \n6. Agregar un atributo (propiedad) \n7. Eliminar una relacion \n8. Eliminar un atributo\n9. Regresar al menu anterior\n10. Salir del programa\n")
                             if opAdmin=="1":
                                 Medicamento = input("Ingrese el nombre del medicamento: ")
                                 med = "'"+Medicamento+"'"
                                 try:
                                     cb.agregarMed(med)
-                                    print("Se ha cargado correctamente")
+                                    print("-Se ha cargado correctamente")
                                 except:
-                                    print("Ha ingresado algo incorrecto")
+                                    print("-La conexion a la base de datos tiene un problema, intentelo de nuevo por favor")
                             elif opAdmin=="2":
                                 Enfermedad = input("Ingrese el nombre de la enfermedad: ")
                                 enfer = "'"+Enfermedad+"'"
                                 try:
                                     cb.agregarEnf(enfer)
-                                    print("Se ha cargado correctamente")
+                                    print("-Se ha cargado correctamente")
                                 except:
-                                    print("Ha ingresado algo incorrecto")
+                                    print("-La conexion a la base de datos tiene un problema, intentelo de nuevo por favor")
                             elif opAdmin=="3":
-                                drug = input("Ingrese el nombre del medicamento que desea borrar: ")
+                                drug = input("Ingrese el nombre del medicamento que desea borrar: ").capitalize()
                                 deleteDrug = "'"+drug+"'"
                                 try:
                                     cb.eliminarMed(deleteDrug)
                                     print("Se ha eliminado correctamente")
                                 except:
-                                    print("Ha ingresado algo incorrecto")
+                                    print("-Ha ingresado algo incorrecto, intentelo de nuevo por favor")
                             elif opAdmin=="4":
-                                Enfermedads = input("ingrese el nombre de la enfermedad que desea borrar: ")
+                                Enfermedads = input("Ingrese el nombre de la enfermedad que desea borrar: ").capitalize()
                                 deleteEnf = "'"+Enfermedads+"'"
                                 try:
                                     cb.eliminarEnf(deleteEnf)
-                                    print("Se ha eliminado correcto")
+                                    print("Se ha eliminado correctamente")
                                 except:
-                                    print("Ha ingresado algo incorrecto")
+                                    print("-Ha ingresado algo incorrecto, intentelo de nuevo por favor")
                             elif opAdmin == "5":
                                 print("Ingrese a continuacion el tipo nodo que desea relacionar")
                                 op1 = input("nodo 1: ")
@@ -81,7 +93,7 @@ while flag:
                                 print("Ingrese a continuacion los nombres los nodos")
                                 nombre1 = input("nombre1: ")
                                 nombre2 = input("nombre2: ")
-                                print("Ingrese la relacion que desea colocar: ")
+                                print("Ingrese el nombre de la relacion que desea colocar")
                                 relacion = input("Ingrese la relacion: ")
                                 nombre1F = "'"+nombre1+"'"
                                 nombre2F = "'"+nombre2+"'"
@@ -89,19 +101,19 @@ while flag:
                                     cb.agregarRelacion(op1,op2,nombre1F,nombre2F,relacion)
                                     print("Se ha creado la relacion correctamente")
                                 except:
-                                    print("Ha ingresado algo incorrecto")
+                                    print("-Ha ingresado algo incorrecto, intentelo de nuevo por favor")
                             elif opAdmin == "6":
                                 nodo = input("Ingreso el tipo de nodo: ")
                                 nombre = input("Ingrese el nombre del nodo: ")
-                                atributo = input("Ingrese el atributo que desea colocar: ")
-                                valor = input("Ingrese el nombre del valor que desea colocar: ")
+                                atributo = input("Ingrese el tipo de atributo que desea colocar: ")
+                                valor = input("Ingrese el nombre del valor que desea colocar a ese atributo: ")
                                 nombreF = "'"+nombre+"'"
                                 valorF = "'"+valor+"'"
                                 try:
                                     cb.agregarA(nodo,nombreF,atributo,valorF)
                                     print("Se ha cargado correctamente")
                                 except:
-                                    print("Ha ingresado algo mal")
+                                    print("-Ha ingresado algo mal, intentelo de nuevo por favor")
                             elif opAdmin == "7":
                                 print("Ingrese a continuacion el tipo nodos en donde eliminara una relacion")
                                 op1 = input("nodo 1: ")

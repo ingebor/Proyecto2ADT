@@ -1,5 +1,5 @@
 from py2neo import Graph
-graph = Graph("http://neo4j:proyectoADT@127.0.0.1:7474/db/data")
+graph = Graph("http://neo4j:Andres9740@127.0.0.1:7474/db/data")
 #
 #llenar un diccionario de enfermedades
 def Enfdict():
@@ -94,16 +94,28 @@ def BuscaMed(nombre,dictionary):
     
 #agregar medicina
 def agregarMed(name):
-    graph.run("create (n:Medicina {name:"+name+"})")
+    graph.run("create (n:Medicina {Nombre:"+name+"})").data()
 #agregar enfermedad
 def agregarEnf(name):
-    graph.run("create (n:Enfermedad {name:"+name+"})")
+    graph.run("create (n:Enfermedad {Nombre:"+name+"})").data()
 #eliminar medicina
 def eliminarMed(name):
-    graph.run("match (n:Medicina {name:"+name+"}) delete n")
+    graph.run("match (n:Medicina {Nombre:"+name+"}) delete n").data()
 #eliminar enfermedad
 def eliminarEnf(name):
-    graph.run("match (n:Enfermedad {name:"+name+"}) delete n")
+    graph.run("match (n:Enfermedad {Nombre:"+name+"}) delete n").data()
+ #agregar relacion   
+def agregarRelacion(op1,op2,name1,name2,relacion):
+    graph.run("match (a:"+op1+" {Nombre:"+name1+"}),(b:"+op2+" {Nombre:"+name2+"}) merge (a)-[r:"+relacion+"]->(b)").data()
+#agregar atributo
+def agregarA(nodo,nombre,atributo,valor):
+    graph.run("match(n:"+nodo+" {Nombre:"+nombre+"}) set n."+atributo+"="+valor+"").data()
+# eliminar relacion
+def deleteR(op1,op2,name1,name2,relacion):
+    graph.run("match (a:"+op1+" {Nombre:"+name1+"})-[r:"+relacion+"]->(b:"+op2+" {Nombre:"+name2+"})  delete r").data()
+#eliminarA
+def deleteA(nodo,nombre,atributo):
+    graph.run("match (n:"+nodo+" {Nombre:"+nombre+"}) remove n."+atributo+"").data()
 #recomendacion
 #Diarrea,DolorCabeza,DolorEstomago,Estornudo,DolorGeneral,FaltaEnergia,Tos,Vomito,
 def Recomendacion(Diarrea,DolorCabeza,DolorEstomago,Estornudo,DolorGeneral,FaltaEnergia,Tos,Vomito,listaEnf):

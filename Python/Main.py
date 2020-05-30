@@ -31,7 +31,9 @@ inicio = True
 while inicio:
     inicial = input("\nSeleccionar una opcion: \n1. Llenar base de datos y continuar\n2. Unicamente continuar\n**Advertencia** Si su base de datos no se encuentra llena, no podra utilizar el programa apropiadamente\n")
     if inicial=="1":
-        cb.adAll()
+        print("Esto puede tardar unos segundos, espere por favor")
+        cb.addAll()
+        print("\nListo!")
         flag = True
         inicio = False
     elif inicial == "2":
@@ -165,10 +167,22 @@ while flag:
             if opUser=="1":
                 userOp1 = True
                 while userOp1:
-                    illName = input("Ingrese el nombre de la enfermedad por favor: ")
+                    illName = input("Ingrese el nombre de la enfermedad por favor: ").capitalize()
                     try:
-                        print("Los sintomas son: ")
-                        cb.BuscaEnf(illName,DictEnf)
+                        print("Los sintomas son los siguientes: ")
+                        sintomas = cb.BuscaEnf(illName,DictEnf)
+                        print("->Diarrea: "+sintomas[0])
+                        print("->Dolor de Cabeza: "+sintomas[1])
+                        print("->Dolor de estomago: "+sintomas[2])
+                        print("->Congestion nasal: "+sintomas[3])
+                        print("->Dolor corporal: "+sintomas[4])
+                        print("->Cansancio, fatiga: "+sintomas[5])
+                        print("->Tos: "+sintomas[6])
+                        print("->Vomitos: "+sintomas[7])
+                        print("Para esta enfermedad se tienen las siguientes recomendaciones: ")
+                        print("->Datos importantes que deben tomarse en cuenta: "+sintomas[9])
+                        print("->Medicamento que puede aliviar los sintomas: "+sintomas[8])
+                        print("->Remedios naturales para aliviar los sintomas: "+sintomas[10])
                         lastUserOp1 = True
                         while lastUserOp1:
                             inpUserOp1 = input("\nDesea:\n1. Regresar al menu anterior\n2. Salir del programa\n")
@@ -184,14 +198,18 @@ while flag:
                             else:
                                 print("\n----No ha ingresado un dato valido, intentelo de nuevo por favor----")
                     except:
-                        print("No se ha encontrado la enfermedad :(")
+                        print("\n--La enfermedad ingresada no se encuntra en la base de datos, lo sentimos. Intentelo de nuevo por favor--\n")
             elif opUser =="2":
                 userOp2 = True
                 while userOp2:
-                    drugName = input("Ingrese el nombre del medicamento por favor: ")
+                    drugName = input("Ingrese el nombre del medicamento por favor: ").capitalize()
                     try:
-                        print("Las especificaciones del medicamento son: ")
-                        cb.BuscaMed(drugName,dictMed)
+                        print("Las especificaciones del medicamento son las siguientes: ")
+                        medicamento = cb.BuscaMed(drugName,dictMed)
+                        print("->Tiene un precio de: "+medicamento[0])
+                        print("->El modo de ingestion es: "+medicamento[1])
+                        print("->Datos importantes que debe tomar en cuenta: "+medicamento[2])
+                        print("->La(s) enfermedad(es) para la(s) que es utilizada: " +medicamento[3])
                         lastUserOp2 = True
                         while lastUserOp2:
                             inpUserOp2 = input("\nDesea:\n1. Regresar al menu anterior\n2. Salir del programa\n")
@@ -207,17 +225,17 @@ while flag:
                             else:
                                 print("\n----No ha ingresado un dato valido, intentelo de nuevo por favor----")
                     except:
-                        print("Este medicamento no se encuentra en la base de datos, intentelo de nuevo por favor")
+                        print("\n--Este medicamento no se encuentra en la base de datos, lo sentimos. Intentelo de nuevo por favor--\n")
             elif opUser=="3":
-                print("De los siguientes sintomás responda: Si y No dependiendo si cuenta con ellos")
+                print("De los siguientes sintomas responda: Si y No, dependiendo si cuenta con ellos o no\n")
                 diarrea = input("Diarrea: \n->")
                 DolorCabeza  = input("Dolor de cabeza: \n->")
                 DolorEstomago = input("Dolor de estomago: \n->")
-                Estornudo = input("Tiene congestion nasal: \n->")
-                DolorGeneral = input("Siente dolor General: \n->")
-                FaltaEnergia = input("Se siente cansado y sin energia?: \n->")
-                Tos = input("Tiene tos?: \n->")
-                Vomito = input("ha tenido episodios de nauseas y vomito?: \n->")
+                Estornudo = input("Congestion nasal: \n->")
+                DolorGeneral = input("Dolor General: \n->")
+                FaltaEnergia = input("Cansado y poca energia: \n->")
+                Tos = input("Tos: \n->")
+                Vomito = input("Episodios de nauseas y vomito: \n->")
                 res = cb.Recomendacion(diarrea,DolorCabeza,DolorEstomago,Estornudo,DolorGeneral,FaltaEnergia,Tos,Vomito,listaEnf)
                 print(res)
                 

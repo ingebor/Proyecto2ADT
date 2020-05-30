@@ -81,7 +81,7 @@ match(n:Medicina{Nombre:'Eritropoyetina'}) set n.Enfermedad='Anemia'
 create(n:Medicina {Nombre:'Penicilina'})
 match(n:Medicina{Nombre:'Penicilina'}) set n.Precio='Q80.00'
 match(n:Medicina{Nombre:'Penicilina'}) set n.Ingestion='Inyectada por un medico'
-match(n:Medicina{Nombre:'Penicilina'}) set n.NotasAS=' '
+match(n:Medicina{Nombre:'Penicilina'}) set n.NotasAD=' '
 match(n:Medicina{Nombre:'Penicilina'}) set n.Enfermedad='Neumonia'
 create (n:Enfermedad {Nombre:'Rinitisalergica'})
 create (n:Enfermedad {Nombre:'Bronquitis'})

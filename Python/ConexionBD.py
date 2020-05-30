@@ -1,6 +1,6 @@
 from py2neo import Graph
-graph = Graph("http://neo4j:pruebaADT@127.0.0.1:7474/db/data")
-#
+graph = Graph("http://neo4j:Andres9740@127.0.0.1:7474/db/data")
+#a
 #llenar un diccionario de enfermedades
 def Enfdict():
     dit = {}
@@ -121,10 +121,21 @@ def deleteA(nodo,nombre,atributo):
 #recomendacion
 #agregar todos los nodos y relaciones a unsa base de datos vacia
 def addAll():
-    f = open("CodigoBaseDeDatos.txt", "r")
-    for x in f:
-        graph.run(""+x+"").data()
-    f.close()
+    confirmar = graph.run("match (n:confirmar {name:'si'}) return n.name").data()
+    final = ""
+    try:
+        nombre = confirmar[0]
+        final = nombre["n.name"]
+    except:
+        final = "no"
+    if final == "si":
+        print("Usted ya ha ingresado la base de datos")
+    elif final == "no":
+        graph.run("create (n:confirmar {name:'si'})").data()
+        f = open("CodigoBaseDeDatos.txt", "r")
+        for x in f:
+            graph.run(""+x+"").data()
+        f.close()
     
     
 #Diarrea,DolorCabeza,DolorEstomago,Estornudo,DolorGeneral,FaltaEnergia,Tos,Vomito,

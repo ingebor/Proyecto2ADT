@@ -132,7 +132,7 @@ while flag:
                                 flagMenuAdmin = False
                                 flagUserName = False
                                 flagAdmin = False
-                            elif opAdmin=="6":
+                            elif opAdmin=="10":
                                 print("¡Muchas gracias por utilizar el programa! Hasta la proxima")
                                 flagMenuAdmin = False
                                 flagUserName = False

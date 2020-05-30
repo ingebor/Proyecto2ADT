@@ -129,7 +129,7 @@ while flag:
                                     cb.deleteR(op1,op2,nombre1F,nombre2F,relacion)
                                     print("Se ha eliminado correctamente")
                                 except:
-                                    print("ha ingresado algo mal")
+                                    print("-Ha ingresado algo mal, intentelo de nuevo por favor")
                             elif opAdmin == "8":
                                 nodo = input("Ingreso el tipo de nodo: ")
                                 nombre = input("Ingrese el nombre del nodo: ")
@@ -139,7 +139,7 @@ while flag:
                                     cb.deleteA(nodo,nombreF,atributo)
                                     print("Se ha eliminado correctamente")
                                 except:
-                                    print("Ha ingresado algo mal")
+                                    print("-Ha ingresado algo mal, intentelo de nuevo por favor")
                                 print("op8 e atributo")
                             elif opAdmin == "9":
                                 flagMenuAdmin = False
@@ -154,9 +154,9 @@ while flag:
                             else:
                                 print("\n----No ha ingresado un dato valido, intentelo de nuevo por favor----")
                     else:
-                        print("Contrasena incorrecta, intentelo de nuevo")
+                        print("*Contrasena incorrecta, intentelo de nuevo")
             else:
-                print("Nombre de usuario incorrecto, intentelo de nuevo")
+                print("*Nombre de usuario incorrecto, intentelo de nuevo")
     elif option1 =="2":
         flag2 = True
         while flag2:

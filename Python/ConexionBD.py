@@ -119,7 +119,7 @@ def deleteA(nodo,nombre,atributo):
 #recomendacion
 #agregar todos los nodos y relaciones a unsa base de datos vacia
 def addAll():
-    f = open("lista.txt", "r")
+    f = open("CodigoBaseDeDatos.txt", "r")
     for x in f:
         graph.run(""+x+"").data()
     f.close()

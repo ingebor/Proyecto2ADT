@@ -1,355 +1,351 @@
-create (n:Enfermedad {Nombre:"Migrana"})
-create (n:Enfermedad {Nombre:"Influenza"})
-create (n:Enfermedad {Nombre:"IntoxicacionAlimentaria"})
-create (n:Enfermedad {Nombre:"Anemia"})
-create (n:Enfermedad {Nombre:"Neumonia"})
-match(n:Enfermedad{Nombre:"Migrana"}) set n.DolorCabeza="Si"
-match(n:Enfermedad{Nombre:"Migrana"}) set n.DolorEstomago="No"
-match(n:Enfermedad{Nombre:"Migrana"}) set n.Vomito="Si"
-match(n:Enfermedad{Nombre:"Migrana"}) set n.Diarrea="No"
-match(n:Enfermedad{Nombre:"Migrana"}) set n.Estornudo="No"
-match(n:Enfermedad{Nombre:"Migrana"}) set n.Tos="No"
-match(n:Enfermedad{Nombre:"Migrana"}) set n.DolorGeneral="No"
-match(n:Enfermedad{Nombre:"Migrana"}) set n.FaltaEnergia="Si"
-match(n:Enfermedad{Nombre:"Migrana"}) set n.NotasAD=" "
-match(n:Enfermedad{Nombre:"Migrana"}) set n.Medicina="Paracetamol"
-match(n:Enfermedad{Nombre:"Influenza"}) set n.DolorCabeza="Si"
-match(n:Enfermedad{Nombre:"Influenza"}) set n.DolorEstomago="No"
-match(n:Enfermedad{Nombre:"Influenza"}) set n.Vomito="No"
-match(n:Enfermedad{Nombre:"Influenza"}) set n.Diarrea="No"
-match(n:Enfermedad{Nombre:"Influenza"}) set n.Estornudo="Si"
-match(n:Enfermedad{Nombre:"Influenza"}) set n.Tos="Si"
-match(n:Enfermedad{Nombre:"Influenza"}) set n.DolorGeneral="No"
-match(n:Enfermedad{Nombre:"Influenza"}) set n.FaltaEnergia="Si"
-match(n:Enfermedad{Nombre:"Influenza"}) set n.NotasAD=" "
-match(n:Enfermedad{Nombre:"Influenza"}) set n.Medicina="Tabcin"
-match(n:Enfermedad{Nombre:"IntoxicacionAlimentaria"}) set n.DolorCabeza="No"
-match(n:Enfermedad{Nombre:"IntoxicacionAlimentaria"}) set n.DolorEstomago="Si"
-match(n:Enfermedad{Nombre:"IntoxicacionAlimentaria"}) set n.Vomito="Si"
-match(n:Enfermedad{Nombre:"IntoxicacionAlimentaria"}) set n.Diarrea="Si"
-match(n:Enfermedad{Nombre:"IntoxicacionAlimentaria"}) set n.Estornudo="No"
-match(n:Enfermedad{Nombre:"IntoxicacionAlimentaria"}) set n.Tos="No"
-match(n:Enfermedad{Nombre:"IntoxicacionAlimentaria"}) set n.DolorGeneral="No"
-match(n:Enfermedad{Nombre:"IntoxicacionAlimentaria"}) set n.FaltaEnergia="Si"
-match(n:Enfermedad{Nombre:"IntoxicacionAlimentaria"}) set n.NotasAD=" "
-match(n:Enfermedad{Nombre:"IntoxicacionAlimentaria"}) set n.Medicina="Loperamida"
-match(n:Enfermedad{Nombre:"Anemia"}) set n.DolorCabeza="Si"
-match(n:Enfermedad{Nombre:"Anemia"}) set n.DolorEstomago="No"
-match(n:Enfermedad{Nombre:"Anemia"}) set n.Vomito="No"
-match(n:Enfermedad{Nombre:"Anemia"}) set n.Diarrea="No"
-match(n:Enfermedad{Nombre:"Anemia"}) set n.Estornudo="No"
-match(n:Enfermedad{Nombre:"Anemia"}) set n.Tos="No"
-match(n:Enfermedad{Nombre:"Anemia"}) set n.DolorGeneral="No"
-match(n:Enfermedad{Nombre:"Anemia"}) set n.FaltaEnergia="Si"
-match(n:Enfermedad{Nombre:"Anemia"}) set n.NotasAD=" "
-match(n:Enfermedad{Nombre:"Anemia"}) set n.Medicina="Eritropoyetina"
-match(n:Enfermedad{Nombre:"Anemia"}) set n.Natural=" "
-match(n:Enfermedad{Nombre:"IntoxicacionAlimentaria"}) set n.Natural="Aceite de oliva con sal y limon"
-match(n:Enfermedad{Nombre:"Influenza"}) set n.Natural="Te de jengibre con canela y miel"
-match(n:Enfermedad{Nombre:"Migrana"}) set n.Natural=" "
-match(n:Enfermedad{Nombre:"Neumonia"}) set n.DolorCabeza="No"
-match(n:Enfermedad{Nombre:"Neumonia"}) set n.DolorEstomago="No"
-match(n:Enfermedad{Nombre:"Neumonia"}) set n.Vomito="No"
-match(n:Enfermedad{Nombre:"Neumonia"}) set n.Diarrea="No"
-match(n:Enfermedad{Nombre:"Neumonia"}) set n.Estornudo="Si"
-match(n:Enfermedad{Nombre:"Neumonia"}) set n.Tos="Si"
-match(n:Enfermedad{Nombre:"Neumonia"}) set n.DolorGeneral="No"
-match(n:Enfermedad{Nombre:"Neumonia"}) set n.FaltaEnergia="Si"
-match(n:Enfermedad{Nombre:"Neumonia"}) set n.NotasAd=" "
-match(n:Enfermedad{Nombre:"Neumonia"}) set n.Medicina="Penicilina"
-match(n:Enfermedad{Nombre:"Neumonia"}) set n.Natural=" "
-create(n:Medicina {Nombre:"Paracetamol"})
-match(n:Medicina{Nombre:"Paracetamol"}) set n.Precio="Q25.00"
-match(n:Medicina{Nombre:"Paracetamol"}) set n.Ingestion="Cada 12 horas"
-match(n:Medicina{Nombre:"Paracetamol"}) set n.NotasAD=" "
-match(n:Medicina{Nombre:"Paracetamol"}) set n.Enfermedad="Migrana"
-create(n:Medicina {Nombre:"Tabcin"})
-match(n:Medicina{Nombre:"Tabcin"}) set n.Precio="Q12.00"
-match(n:Medicina{Nombre:"Tabcin"}) set n.Ingestion="3 veces al dia"
-match(n:Medicina{Nombre:"Tabcin"}) set n.NotasAD=" "
-match(n:Medicina{Nombre:"Tabcin"}) set n.Enfermedad="Influenza"
-create(n:Medicina {Nombre:"Loperamida"})
-match(n:Medicina{Nombre:"Loperamida"}) set n.Precio="Q30.00"
-match(n:Medicina{Nombre:"Loperamida"}) set n.Ingestion="2 veces al dia"
-match(n:Medicina{Nombre:"Loperamida"}) set n.NotasAD=" "
-match(n:Medicina{Nombre:"Loperamida"}) set n.Enfermedad="IntoxicacionAlimentaria"
-create(n:Medicina {Nombre:"Eritropoyetina"})
-match(n:Medicina{Nombre:"Eritropoyetina"}) set n.Precio="Q40.00"
-match(n:Medicina{Nombre:"Eritropoyetina"}) set n.Ingestion="Antes de cada comida"
-match(n:Medicina{Nombre:"Eritropoyetina"}) set n.NotasAD=" "
-match(n:Medicina{Nombre:"Eritropoyetina"}) set n.Enfermedad="Anemia"
-create(n:Medicina {Nombre:"Penicilina"})
-match(n:Medicina{Nombre:"Penicilina"}) set n.Precio="Q80.00"
-match(n:Medicina{Nombre:"Penicilina"}) set n.Ingestion="Inyectada por un medico"
-match(n:Medicina{Nombre:"Penicilina"}) set n.NotasAS=" "
-match(n:Medicina{Nombre:"Penicilina"}) set n.Enfermedad="Neumonia"
-create (n:Enfermedad {Nombre:"Rinitisalergica"})
-create (n:Enfermedad {Nombre:"Bronquitis"})
-create (n:Enfermedad {Nombre:"Gastritis"})
-create (n:Enfermedad {Nombre:"Paperas"})
-create (n:Enfermedad {Nombre:"Rotavirus"})
-create (n:Enfermedad {Nombre:"Covid19"})
-create (n:Enfermedad {Nombre:"Varicela"})
-create (n:Enfermedad {Nombre:"Dengue"})
-create (n:Enfermedad {Nombre:"Fiebre tifoidea"})
-create (n:Enfermedad {Nombre:"Malaria"})
-create (n:Enfermedad {Nombre:"Tuberculosis"})
-match(n:Enfermedad {Nombre:"Rinitisalergica"}) set n.Nombre="Rinitis alergica"
-match(n:Enfermedad {Nombre:"IntoxicacionAlimentaria"}) set n.Nombre="Intoxicacion alimentaria"
-match(n:Medicina{Nombre:"Loperamida"}) set n.Enfermedad="Intoxicacion alimentaria"
-match(n:Enfermedad {Nombre:"Covid19"}) set n.Nombre="Covid-19"
-match(n:Enfermedad {Nombre:"Rinitis alergica"}) set n.DolorCabeza="Si"
-match(n:Enfermedad {Nombre:"Rinitis alergica"}) set n.DolorEstomago="No"
-match(n:Enfermedad {Nombre:"Rinitis alergica"}) set n.Vomito="No"
-match(n:Enfermedad {Nombre:"Rinitis alergica"}) set n.Diarrea="No"
-match(n:Enfermedad {Nombre:"Rinitis alergica"}) set n.Estornudo="Si"
-match(n:Enfermedad {Nombre:"Rinitis alergica"}) set n.Tos="No"
-match(n:Enfermedad {Nombre:"Rinitis alergica"}) set n.DolorGeneral="No"
-match(n:Enfermedad {Nombre:"Rinitis alergica"}) set n.FaltaEnergia="No"
-match(n:Enfermedad {Nombre:"Rinitis alergica"}) set n.NotasAD=" "
-match(n:Enfermedad {Nombre:"Rinitis alergica"}) set n.Medicina="Allegra"
-match(n:Enfermedad {Nombre:"Bronquitis"}) set n.DolorCabeza="Si"
-match(n:Enfermedad {Nombre:"Bronquitis"}) set n.DolorEstomago="No"
-match(n:Enfermedad {Nombre:"Bronquitis"}) set n.Vomito="No"
-match(n:Enfermedad {Nombre:"Bronquitis"}) set n.Diarrea="No"
-match(n:Enfermedad {Nombre:"Bronquitis"}) set n.Estornudo="No"
-match(n:Enfermedad {Nombre:"Bronquitis"}) set n.Tos="Si"
-match(n:Enfermedad {Nombre:"Bronquitis"}) set n.DolorGeneral="No"
-match(n:Enfermedad {Nombre:"Bronquitis"}) set n.FaltaEnergia="Si"
-match(n:Enfermedad {Nombre:"Bronquitis"}) set n.NotasAD=" "
-match(n:Enfermedad {Nombre:"Bronquitis"}) set n.Medicina="Paracetamol"
-match(n:Enfermedad {Nombre:"Rinitis alergica"}) set n.Natural=" "
-match(n:Enfermedad {Nombre:"Bronquitis"}) set n.Natural="Te de pimienta con miel"
-match(n:Enfermedad {Nombre:"Gastritis"}) set n.DolorCabeza="No"
-match(n:Enfermedad {Nombre:"Gastritis"}) set n.DolorEstomago="Si"
-match(n:Enfermedad {Nombre:"Gastritis"}) set n.Vomito="Si"
-match(n:Enfermedad {Nombre:"Gastritis"}) set n.Diarrea="No"
-match(n:Enfermedad {Nombre:"Gastritis"}) set n.Estornudo="No"
-match(n:Enfermedad {Nombre:"Gastritis"}) set n.Tos="No"
-match(n:Enfermedad {Nombre:"Gastritis"}) set n.DolorGeneral="No"
-match(n:Enfermedad {Nombre:"Gastritis"}) set n.FaltaEnergia="No"
-match(n:Enfermedad {Nombre:"Gastritis"}) set n.NotasAD=" "
-match(n:Enfermedad {Nombre:"Gastritis"}) set n.Medicia="Penicilina"
-match(n:Enfermedad {Nombre:"Gastritis"}) set n.Natural="Te verde con miel"
-match(n:Enfermedad {Nombre:"Paperas"}) set n.DolorCabeza="Si"
-match(n:Enfermedad {Nombre:"Paperas"}) set n.DolorEstomago="No"
-match(n:Enfermedad {Nombre:"Paperas"}) set n.Vomito="No"
-match(n:Enfermedad {Nombre:"Paperas"}) set n.Diarrea="No"
-match(n:Enfermedad {Nombre:"Paperas"}) set n.Estornudo="No"
-match(n:Enfermedad {Nombre:"Paperas"}) set n.Tos="No"
-match(n:Enfermedad {Nombre:"Paperas"}) set n.DolorGeneral="No"
-match(n:Enfermedad {Nombre:"Paperas"}) set n.FaltaEnergia="Si"
-match(n:Enfermedad {Nombre:"Paperas"}) set n.NotasAD=" "
-match(n:Enfermedad {Nombre:"Paperas"}) set n.Medicina="Tylenol"
-match(n:Enfermedad {Nombre:"Paperas"}) set n.Natural="Gargaras de te de manzanilla, compresa de sabila"
-match(n:Enfermedad {Nombre:"Rotavirus"}) set n.DolorCabeza="Si"
-match(n:Enfermedad {Nombre:"Rotavirus"}) set n.DolorEstomago="Si"
-match(n:Enfermedad {Nombre:"Rotavirus"}) set n.Vomito="Si"
-match(n:Enfermedad {Nombre:"Rotavirus"}) set n.Diarrea="Si"
-match(n:Enfermedad {Nombre:"Rotavirus"}) set n.Estornudo="No"
-match(n:Enfermedad {Nombre:"Rotavirus"}) set n.Tos="No"
-match(n:Enfermedad {Nombre:"Rotavirus"}) set n.DolorGeneral="No"
-match(n:Enfermedad {Nombre:"Rotavirus"}) set n.FaltaEnergia="Si"
-match(n:Enfermedad {Nombre:"Rotavirus"}) set n.NotasAD="No hay un medicamento especifico para tratar las enfermedades por rotavirus"
-match(n:Enfermedad {Nombre:"Rotavirus"}) set n.Medicina="- "
-match(n:Enfermedad {Nombre:"Rotavirus"}) set n.Natural="Hidratacion continua"
-match(n:Enfermedad {Nombre:"Covid-19"}) set n.DolorCabeza="Si"
-match(n:Enfermedad {Nombre:"Covid-19"}) set n.DolorEstomago="No"
-match(n:Enfermedad {Nombre:"Covid-19"}) set n.Vomito="No"
-match(n:Enfermedad {Nombre:"Covid-19"}) set n.Diarrea="No"
-match(n:Enfermedad {Nombre:"Covid-19"}) set n.Estornudo="No"
-match(n:Enfermedad {Nombre:"Covid-19"}) set n.Tos="Si"
-match(n:Enfermedad {Nombre:"Covid-19"}) set n.DolorGeneral="No"
-match(n:Enfermedad {Nombre:"Covid-19"}) set n.FaltaEnergia="Si"
-match(n:Enfermedad {Nombre:"Covid-19"}) set n.NotasAD="No hay medicamento especifico para el tratamiento del covid-19"
-match(n:Enfermedad {Nombre:"Covid-19"}) set n.Medicina="-"
-match(n:Enfermedad {Nombre:"Covid-19"}) set n.Natural="Descanso, hidratacion"
-match(n:Enfermedad {Nombre:"Varicela"}) set n.DolorCabeza="Si"
-match(n:Enfermedad {Nombre:"Varicela"}) set n.DolorEstomago="No"
-match(n:Enfermedad {Nombre:"Varicela"}) set n.Vomito="No"
-match(n:Enfermedad {Nombre:"Varicela"}) set n.Diarrea="No"
-match(n:Enfermedad {Nombre:"Varicela"}) set n.Estornudo="No"
-match(n:Enfermedad {Nombre:"Varicela"}) set n.Tos="No"
-match(n:Enfermedad {Nombre:"Varicela"}) set n.DolorGeneral="No"
-match(n:Enfermedad {Nombre:"Varicela"}) set n.FaltaEnergia="Si"
-match(n:Enfermedad {Nombre:"Varicela"}) set n.NotasAD="Se presenta un zarpullido"
-match(n:Enfermedad {Nombre:"Varicela"}) set n.Medicina="Paracetamol"
-match(n:Enfermedad {Nombre:"Varicela"}) set n.Natural="Bano de avena"
-match(n:Enfermedad {Nombre:"Dengue"}) set n.DolorCabeza="Si"
-match(n:Enfermedad {Nombre:"Dengue"}) set n.DolorEstomago="No"
-match(n:Enfermedad {Nombre:"Dengue"}) set n.Vomito="Si"
-match(n:Enfermedad {Nombre:"Dengue"}) set n.Diarrea="No"
-match(n:Enfermedad {Nombre:"Dengue"}) set n.Estornudo="No"
-match(n:Enfermedad {Nombre:"Dengue"}) set n.Tos="No"
-match(n:Enfermedad {Nombre:"Dengue"}) set n.DolorGeneral="Si"
-match(n:Enfermedad {Nombre:"Dengue"}) set n.FaltaEnergia="Si"
-match(n:Enfermedad {Nombre:"Dengue"}) set n.NotasAD=" "
-match(n:Enfermedad {Nombre:"Dengue"}) set n.Medicina="Tylenol"
-match(n:Enfermedad {Nombre:"Dengue"}) set n.Natural="Ingestion de liquidos, reposo"
-match(n:Enfermedad {Nombre:"Fiebre tifoidea"}) set n.DolorCabeza="Si"
-match(n:Enfermedad {Nombre:"Fiebre tifoidea"}) set n.DolorEstomago="Si"
-match(n:Enfermedad {Nombre:"Fiebre tifoidea"}) set n.Vomito="No"
-match(n:Enfermedad {Nombre:"Fiebre tifoidea"}) set n.Diarrea="Si"
-match(n:Enfermedad {Nombre:"Fiebre tifoidea"}) set n.Estornudo="No"
-match(n:Enfermedad {Nombre:"Fiebre tifoidea"}) set n.Tos="No"
-match(n:Enfermedad {Nombre:"Fiebre tifoidea"}) set n.DolorGeneral="No"
-match(n:Enfermedad {Nombre:"Fiebre tifoidea"}) set n.FaltaEnergia="Si"
-match(n:Enfermedad {Nombre:"Fiebre tifoidea"}) set n.NotasAD=" "
-match(n:Enfermedad {Nombre:"Fiebre tifoidea"}) set n.Medicina="Penicilina"
-match(n:Enfermedad {Nombre:"Fiebre tifoidea"}) set n.Natural="Hidratacion"
-match(n:Enfermedad {Nombre:"Malaria"}) set n.DolorCabeza="Si"
-match(n:Enfermedad {Nombre:"Malaria"}) set n.DolorEstomago="No"
-match(n:Enfermedad {Nombre:"Malaria"}) set n.Vomito="No"
-match(n:Enfermedad {Nombre:"Malaria"}) set n.Diarrea="Si"
-match(n:Enfermedad {Nombre:"Malaria"}) set n.Estornudo="No"
-match(n:Enfermedad {Nombre:"Malaria"}) set n.Tos="No"
-match(n:Enfermedad {Nombre:"Malaria"}) set n.DolorGeneral="No"
-match(n:Enfermedad {Nombre:"Malaria"}) set n.FaltaEnergia="No"
-match(n:Enfermedad {Nombre:"Malaria"}) set n.NotasAD="Sudor y confusion"
-match(n:Enfermedad {Nombre:"Malaria"}) set n.Medicina="Malarone"
-match(n:Enfermedad {Nombre:"Malaria"}) set n.Natural="Reposo"
-match(n:Enfermedad {Nombre:"Tuberculosis"}) set n.DolorCabeza="No"
-match(n:Enfermedad {Nombre:"Tuberculosis"}) set n.DolorEstomago="No"
-match(n:Enfermedad {Nombre:"Tuberculosis"}) set n.Vomito="No"
-match(n:Enfermedad {Nombre:"Tuberculosis"}) set n.Diarrea="No"
-match(n:Enfermedad {Nombre:"Tuberculosis"}) set n.Estornudo="No"
-match(n:Enfermedad {Nombre:"Tuberculosis"}) set n.Tos="Si"
-match(n:Enfermedad {Nombre:"Tuberculosis"}) set n.DolorGeneral="No"
-match(n:Enfermedad {Nombre:"Tuberculosis"}) set n.FaltaEnergia="No"
-match(n:Enfermedad {Nombre:"Tuberculosis"}) set n.NotasAD="Perdida de peso, flema, sudores"
-match(n:Enfermedad {Nombre:"Tuberculosis"}) set n.Medicina="Isoniazida INH"
-match(n:Enfermedad {Nombre:"Tuberculosis"}) set n.Natural="Reposo"
-create (n:Medicina {Nombre:"Allegra"})
-create (n:Medicina {Nombre:"Tylenol"})
-create (n:Medicina {Nombre:"Malarone"})
-create (n:Medicina {Nombre:"Isoniazida INH"})
-match(n:Medicina {Nombre:"Allegra"}) set n.Precio="Q18.00"
-match(n:Medicina {Nombre:"Allegra"}) set n.Ingestion="3 veces al dia"
-match(n:Medicina {Nombre:"Allegra"}) set n.NotasAD=" "
-match(n:Medicina {Nombre:"Allegra"}) set n.Enfermedad="Rinitis alergica "
-match(n:Medicina {Nombre:"Tylenol"}) set n.Precio="Q15.00"
-match(n:Medicina {Nombre:"Tylenol"}) set n.Ingestion="3 veces al dia"
-match(n:Medicina {Nombre:"Tylenol"}) set n.NotasAD=" "
-match(n:Medicina {Nombre:"Tylenol"}) set n.Enfermedad="Paperas, Dengue"
-match(n:Medicina {Nombre:"Ceftriaxona"}) set n.Precio="Q90.00"
-match(n:Medicina {Nombre:"Ceftriaxona"}) set n.Ingestion="Seguir indicaciones del medico"
-match(n:Medicina {Nombre:"Ceftriaxona"}) set n.NotasAD=" "
-match(n:Medicina {Nombre:"Ceftriaxona"}) set n.Enfermedad="Fiebre tifoidea"
-match(n:Medicina {Nombre:"Malarone"}) set n.Precio="Q250.00"
-match(n:Medicina {Nombre:"Malarone"}) set n.Ingestion="Seguir indicaciones del medico"
-match(n:Medicina {Nombre:"Malarone"}) set n.NotasAD=" "
-match(n:Medicina {Nombre:"Malarone"}) set n.Enfermedad="Malaria"
-match(n:Medicina {Nombre:"Isoniazida INH"}) set n.Precio="Q90.00"
-match(n:Medicina {Nombre:"Isoniazida INH"}) set n.Ingestion="Seguir indicaciones del medico"
-match(n:Medicina {Nombre:"Isoniazida INH"}) set n.NotasAD=" "
-match(n:Medicina {Nombre:"Isoniazida INH"}) set n.Enfermedad="Tuberculosis"
-match(n:Medicina {Nombre:"Paracetamol"}) set n.Enfermedad="Migrana, Bronquitis, Varicela"
-match(n:Medicina {Nombre:"Penicilina"}) set n.Enfermedad="Neumonia, Gastritis"
-match (a:Enfermedad {Nombre:"Fiebre tifoidea"}),(b:Medicina {Nombre:"Penicilina"}) merge (a)-[r:Diarrea]->(b)
-match (a:Enfermedad {Nombre:"Fiebre tifoidea"}),(b:Medicina {Nombre:"Penicilina"}) merge (a)-[r:DolorCabeza]->(b)
-match (a:Enfermedad {Nombre:"Fiebre tifoidea"}),(b:Medicina {Nombre:"Penicilina"}) merge (a)-[r:DolorEstomago]->(b)
-match (a:Enfermedad {Nombre:"Fiebre tifoidea"}),(b:Medicina {Nombre:"Penicilina"}) merge (a)-[r:FaltaEnergia]->(b)
-match (a:Enfermedad {Nombre:"Dengue"}),(b:Medicina {Nombre:"Tylenol"}) merge (a)-[r:FaltaEnergia]->(b)
-match (a:Enfermedad {Nombre:"Dengue"}),(b:Medicina {Nombre:"Tylenol"}) merge (a)-[r:Vomito]->(b)
-match (a:Enfermedad {Nombre:"Dengue"}),(b:Medicina {Nombre:"Tylenol"}) merge (a)-[r:DolorCabeza]->(b)
-match (a:Enfermedad {Nombre:"Dengue"}),(b:Medicina {Nombre:"Tylenol"}) merge (a)-[r:DolorGeneral]->(b)
-match (a:Enfermedad {Nombre:"Malaria"}),(b:Medicina {Nombre:"Malarone"}) merge (a)-[r:DolorCabeza]->(b)
-match (a:Enfermedad {Nombre:"Malaria"}),(b:Medicina {Nombre:"Malarone"}) merge (a)-[r:Diarrea]->(b)
-match (a:Enfermedad {Nombre:"Influenza"}),(b:Medicina {Nombre:"Tabcin"}) merge (a)-[r:DolorCabeza]->(b)
-match (a:Enfermedad {Nombre:"Influenza"}),(b:Medicina {Nombre:"Tabcin"}) merge (a)-[r:Estornudo]->(b)
-match (a:Enfermedad {Nombre:"Influenza"}),(b:Medicina {Nombre:"Tabcin"}) merge (a)-[r:FaltaEnergia]->(b)
-match (a:Enfermedad {Nombre:"Influenza"}),(b:Medicina {Nombre:"Tabcin"}) merge (a)-[r:Tos]->(b)
-match (a:Enfermedad {Nombre:"Neumonia"}),(b:Medicina {Nombre:"Penicilina"}) merge (a)-[r:Tos]->(b)
-match (a:Enfermedad {Nombre:"Neumonia"}),(b:Medicina {Nombre:"Penicilina"}) merge (a)-[r:FaltaEnergia]->(b)
-match (a:Enfermedad {Nombre:"Neumonia"}),(b:Medicina {Nombre:"Penicilina"}) merge (a)-[r:Estornudo]->(b)
-match (a:Enfermedad {Nombre:"Rinitis alergica"}),(b:Medicina {Nombre:"Allegra"}) merge (a)-[r:Estornudo]->(b)
-match (a:Enfermedad {Nombre:"Rinitis alergica"}),(b:Medicina {Nombre:"Allegra"}) merge (a)-[r:DolorCabeza]->(b)
-match (a:Enfermedad {Nombre:"Bronquitis"}),(b:Medicina {Nombre:"Paracetamol"}) merge (a)-[r:DolorCabeza]->(b)
-match (a:Enfermedad {Nombre:"Bronquitis"}),(b:Medicina {Nombre:"Paracetamol"}) merge (a)-[r:Tos]->(b)
-match (a:Enfermedad {Nombre:"Bronquitis"}),(b:Medicina {Nombre:"Paracetamol"}) merge (a)-[r:FaltaEnergia]->(b)
-match (a:Enfermedad {Nombre:"Anemia"}),(b:Medicina {Nombre:"Eritropoyetina"}) merge (a)-[r:FaltaEnergia]->(b)
-match (a:Enfermedad {Nombre:"Anemia"}),(b:Medicina {Nombre:"Eritropoyetina"}) merge (a)-[r:DolorCabeza]->(b)
-match (a:Enfermedad {Nombre:"Intoxicacion alimentaria"}),(b:Medicina {Nombre:"Loperamida"}) merge (a)-[r:DolorEstomago]->(b)
-match (a:Enfermedad {Nombre:"Intoxicacion alimentaria"}),(b:Medicina {Nombre:"Loperamida"}) merge (a)-[r:Diarrea]->(b)
-match (a:Enfermedad {Nombre:"Intoxicacion alimentaria"}),(b:Medicina {Nombre:"Loperamida"}) merge (a)-[r:FaltaEnergia]->(b)
-match (a:Enfermedad {Nombre:"Intoxicacion alimentaria"}),(b:Medicina {Nombre:"Loperamida"}) merge (a)-[r:Vomito]->(b)
-match (a:Enfermedad {Nombre:"Migrana"}),(b:Medicina {Nombre:"Paracetamol"}) merge (a)-[r:Vomito]->(b)
-match (a:Enfermedad {Nombre:"Migrana"}),(b:Medicina {Nombre:"Paracetamol"}) merge (a)-[r:FaltaEnergia]->(b)
-match (a:Enfermedad {Nombre:"Migrana"}),(b:Medicina {Nombre:"Paracetamol"}) merge (a)-[r:DolorCabeza]->(b)
-match (a:Enfermedad {Nombre:"Tuberculosis"}),(b:Medicina {Nombre:"Isoniazida INH"}) merge (a)-[r:Tos]->(b)
-match (a:Enfermedad {Nombre:"Varicela"}),(b:Medicina {Nombre:"Paracetamol"}) merge (a)-[r:DolorCabeza]->(b)
-match (a:Enfermedad {Nombre:"Varicela"}),(b:Medicina {Nombre:"Paracetamol"}) merge (a)-[r:FaltaEnergia]->(b)
-match (a:Enfermedad {Nombre:"Paperas"}),(b:Medicina {Nombre:"Tylenol"}) merge (a)-[r:FaltaEnergia]->(b)
-match (a:Enfermedad {Nombre:"Paperas"}),(b:Medicina {Nombre:"Tylenol"}) merge (a)-[r:DolorCabeza]->(b)
-match (a:Enfermedad {Nombre:"Gastritis"}),(b:Medicina {Nombre:"Penicilina"}) merge (a)-[r:DolorEstomago]->(b)
-match (a:Enfermedad {Nombre:"Gastritis"}),(b:Medicina {Nombre:"Penicilina"}) merge (a)-[r:Vomito]->(b)
-match (a:Enfermedad {Nombre:"Fiebre tifoidea"}),(b:Enfermedad {Nombre:"Dengue"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Fiebre tifoidea"}),(b:Enfermedad {Nombre:"Malaria"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Fiebre tifoidea"}),(b:Enfermedad {Nombre:"Influenza"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Fiebre tifoidea"}),(b:Enfermedad {Nombre:"Rinitis alergica"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Fiebre tifoidea"}),(b:Enfermedad {Nombre:"Bronquitis"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Fiebre tifoidea"}),(b:Enfermedad {Nombre:"Anemia"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Fiebre tifoidea"}),(b:Enfermedad {Nombre:"Migrana"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Fiebre tifoidea"}),(b:Enfermedad {Nombre:"Varicela"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Fiebre tifoidea"}),(b:Enfermedad {Nombre:"Covid-19"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Fiebre tifoidea"}),(b:Enfermedad {Nombre:"Rotavirus"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Fiebre tifoidea"}),(b:Enfermedad {Nombre:"Paperas"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Dengue"}),(b:Enfermedad {Nombre:"Malaria"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Dengue"}),(b:Enfermedad {Nombre:"Influenza"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Dengue"}),(b:Enfermedad {Nombre:"Rinitis alergica"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Dengue"}),(b:Enfermedad {Nombre:"Bronquitis"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Dengue"}),(b:Enfermedad {Nombre:"Anemia"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Dengue"}),(b:Enfermedad {Nombre:"Migrana"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Dengue"}),(b:Enfermedad {Nombre:"Varicela"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Dengue"}),(b:Enfermedad {Nombre:"Covid-19"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Dengue"}),(b:Enfermedad {Nombre:"Rotavirus"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Dengue"}),(b:Enfermedad {Nombre:"Paperas"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Malaria"}),(b:Enfermedad {Nombre:"Influenza"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Malaria"}),(b:Enfermedad {Nombre:"Rinitis alergica"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Malaria"}),(b:Enfermedad {Nombre:"Bronquitis"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Malaria"}),(b:Enfermedad {Nombre:"Anemia"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Malaria"}),(b:Enfermedad {Nombre:"Migrana"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Malaria"}),(b:Enfermedad {Nombre:"Varicela"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Malaria"}),(b:Enfermedad {Nombre:"Covid-19"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Malaria"}),(b:Enfermedad {Nombre:"Rotavirus"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Malaria"}),(b:Enfermedad {Nombre:"Paperas"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Influenza"}),(b:Enfermedad {Nombre:"Rinitis alergica"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Influenza"}),(b:Enfermedad {Nombre:"Bronquitis"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Influenza"}),(b:Enfermedad {Nombre:"Anemia"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Influenza"}),(b:Enfermedad {Nombre:"Migrana"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Influenza"}),(b:Enfermedad {Nombre:"Varicela"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Influenza"}),(b:Enfermedad {Nombre:"Covid-19"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Influenza"}),(b:Enfermedad {Nombre:"Rotavirus"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Influenza"}),(b:Enfermedad {Nombre:"Paperas"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Rinitis alergica"}),(b:Enfermedad {Nombre:"Bronquitis"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Rinitis alergica"}),(b:Enfermedad {Nombre:"Anemia"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Rinitis alergica"}),(b:Enfermedad {Nombre:"Migrana"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Rinitis alergica"}),(b:Enfermedad {Nombre:"Varicela"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Rinitis alergica"}),(b:Enfermedad {Nombre:"Covid-19"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Rinitis alergica"}),(b:Enfermedad {Nombre:"Rotavirus"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Rinitis alergica"}),(b:Enfermedad {Nombre:"Paperas"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Bronquitis"}),(b:Enfermedad {Nombre:"Anemia"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Bronquitis"}),(b:Enfermedad {Nombre:"Migrana"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Bronquitis"}),(b:Enfermedad {Nombre:"Varicela"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Bronquitis"}),(b:Enfermedad {Nombre:"Covid-19"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Bronquitis"}),(b:Enfermedad {Nombre:"Rotavirus"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Bronquitis"}),(b:Enfermedad {Nombre:"Paperas"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Anemia"}),(b:Enfermedad {Nombre:"Migrana"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Anemia"}),(b:Enfermedad {Nombre:"Varicela"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Anemia"}),(b:Enfermedad {Nombre:"Covid-19"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Anemia"}),(b:Enfermedad {Nombre:"Rotavirus"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Anemia"}),(b:Enfermedad {Nombre:"Paperas"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Migrana"}),(b:Enfermedad {Nombre:"Varicela"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Migrana"}),(b:Enfermedad {Nombre:"Covid-19"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Migrana"}),(b:Enfermedad {Nombre:"Rotavirus"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Migrana"}),(b:Enfermedad {Nombre:"Paperas"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Varicela"}),(b:Enfermedad {Nombre:"Covid-19"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Varicela"}),(b:Enfermedad {Nombre:"Rotavirus"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Varicela"}),(b:Enfermedad {Nombre:"Paperas"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Covid-19"}),(b:Enfermedad {Nombre:"Rotavirus"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Covid-19"}),(b:Enfermedad {Nombre:"Paperas"}) merge (a)-[r:DolorCabeza]-(b)
-match (a:Enfermedad {Nombre:"Rotavirus"}),(b:Enfermedad {Nombre:"Paperas"}) merge (a)-[r:DolorCabeza]-(b)
-match (n:Enfermedad {Nombre:"Gastritis"}) remove n.Medicia
-match (n:Enfermedad {Nombre:"Gastritis"}) set n.Medicina="Penicilina"
-match (n:Medicina {Nombre:"Penicilina"}) remove n.NotasAS
-match (n:Medicina {Nombre:"Penicilina"}) set n.NotasAD=" "
+create (n:Enfermedad {Nombre:'Migrana'})
+create (n:Enfermedad {Nombre:'Influenza'})
+create (n:Enfermedad {Nombre:'IntoxicacionAlimentaria'})
+create (n:Enfermedad {Nombre:'Anemia'})
+create (n:Enfermedad {Nombre:'Neumonia'})
+match(n:Enfermedad{Nombre:'Migrana'}) set n.DolorCabeza='Si'
+match(n:Enfermedad{Nombre:'Migrana'}) set n.DolorEstomago='No'
+match(n:Enfermedad{Nombre:'Migrana'}) set n.Vomito='Si'
+match(n:Enfermedad{Nombre:'Migrana'}) set n.Diarrea='No'
+match(n:Enfermedad{Nombre:'Migrana'}) set n.Estornudo='No'
+match(n:Enfermedad{Nombre:'Migrana'}) set n.Tos='No'
+match(n:Enfermedad{Nombre:'Migrana'}) set n.DolorGeneral='No'
+match(n:Enfermedad{Nombre:'Migrana'}) set n.FaltaEnergia='Si'
+match(n:Enfermedad{Nombre:'Migrana'}) set n.NotasAD=' '
+match(n:Enfermedad{Nombre:'Migrana'}) set n.Medicina='Paracetamol'
+match(n:Enfermedad{Nombre:'Influenza'}) set n.DolorCabeza='Si'
+match(n:Enfermedad{Nombre:'Influenza'}) set n.DolorEstomago='No'
+match(n:Enfermedad{Nombre:'Influenza'}) set n.Vomito='No'
+match(n:Enfermedad{Nombre:'Influenza'}) set n.Diarrea='No'
+match(n:Enfermedad{Nombre:'Influenza'}) set n.Estornudo='Si'
+match(n:Enfermedad{Nombre:'Influenza'}) set n.Tos='Si'
+match(n:Enfermedad{Nombre:'Influenza'}) set n.DolorGeneral='No'
+match(n:Enfermedad{Nombre:'Influenza'}) set n.FaltaEnergia='Si'
+match(n:Enfermedad{Nombre:'Influenza'}) set n.NotasAD=' '
+match(n:Enfermedad{Nombre:'Influenza'}) set n.Medicina='Tabcin'
+match(n:Enfermedad{Nombre:'IntoxicacionAlimentaria'}) set n.DolorCabeza='No'
+match(n:Enfermedad{Nombre:'IntoxicacionAlimentaria'}) set n.DolorEstomago='Si'
+match(n:Enfermedad{Nombre:'IntoxicacionAlimentaria'}) set n.Vomito='Si'
+match(n:Enfermedad{Nombre:'IntoxicacionAlimentaria'}) set n.Diarrea='Si'
+match(n:Enfermedad{Nombre:'IntoxicacionAlimentaria'}) set n.Estornudo='No'
+match(n:Enfermedad{Nombre:'IntoxicacionAlimentaria'}) set n.Tos='No'
+match(n:Enfermedad{Nombre:'IntoxicacionAlimentaria'}) set n.DolorGeneral='No'
+match(n:Enfermedad{Nombre:'IntoxicacionAlimentaria'}) set n.FaltaEnergia='Si'
+match(n:Enfermedad{Nombre:'IntoxicacionAlimentaria'}) set n.NotasAD=' '
+match(n:Enfermedad{Nombre:'IntoxicacionAlimentaria'}) set n.Medicina='Loperamida'
+match(n:Enfermedad{Nombre:'Anemia'}) set n.DolorCabeza='Si'
+match(n:Enfermedad{Nombre:'Anemia'}) set n.DolorEstomago='No'
+match(n:Enfermedad{Nombre:'Anemia'}) set n.Vomito='No'
+match(n:Enfermedad{Nombre:'Anemia'}) set n.Diarrea='No'
+match(n:Enfermedad{Nombre:'Anemia'}) set n.Estornudo='No'
+match(n:Enfermedad{Nombre:'Anemia'}) set n.Tos='No'
+match(n:Enfermedad{Nombre:'Anemia'}) set n.DolorGeneral='No'
+match(n:Enfermedad{Nombre:'Anemia'}) set n.FaltaEnergia='Si'
+match(n:Enfermedad{Nombre:'Anemia'}) set n.NotasAD=' '
+match(n:Enfermedad{Nombre:'Anemia'}) set n.Medicina='Eritropoyetina'
+match(n:Enfermedad{Nombre:'Anemia'}) set n.Natural=' '
+match(n:Enfermedad{Nombre:'IntoxicacionAlimentaria'}) set n.Natural='Aceite de oliva con sal y limon'
+match(n:Enfermedad{Nombre:'Influenza'}) set n.Natural='Te de jengibre con canela y miel'
+match(n:Enfermedad{Nombre:'Migrana'}) set n.Natural=' '
+match(n:Enfermedad{Nombre:'Neumonia'}) set n.DolorCabeza='No'
+match(n:Enfermedad{Nombre:'Neumonia'}) set n.DolorEstomago='No'
+match(n:Enfermedad{Nombre:'Neumonia'}) set n.Vomito='No'
+match(n:Enfermedad{Nombre:'Neumonia'}) set n.Diarrea='No'
+match(n:Enfermedad{Nombre:'Neumonia'}) set n.Estornudo='Si'
+match(n:Enfermedad{Nombre:'Neumonia'}) set n.Tos='Si'
+match(n:Enfermedad{Nombre:'Neumonia'}) set n.DolorGeneral='No'
+match(n:Enfermedad{Nombre:'Neumonia'}) set n.FaltaEnergia='Si'
+match(n:Enfermedad{Nombre:'Neumonia'}) set n.NotasAd=' '
+match(n:Enfermedad{Nombre:'Neumonia'}) set n.Medicina='Penicilina'
+match(n:Enfermedad{Nombre:'Neumonia'}) set n.Natural=' '
+create(n:Medicina {Nombre:'Paracetamol'})
+match(n:Medicina{Nombre:'Paracetamol'}) set n.Precio='Q25.00'
+match(n:Medicina{Nombre:'Paracetamol'}) set n.Ingestion='Cada 12 horas'
+match(n:Medicina{Nombre:'Paracetamol'}) set n.NotasAD=' '
+match(n:Medicina{Nombre:'Paracetamol'}) set n.Enfermedad='Migrana'
+create(n:Medicina {Nombre:'Tabcin'})
+match(n:Medicina{Nombre:'Tabcin'}) set n.Precio='Q12.00'
+match(n:Medicina{Nombre:'Tabcin'}) set n.Ingestion='3 veces al dia'
+match(n:Medicina{Nombre:'Tabcin'}) set n.NotasAD=' '
+match(n:Medicina{Nombre:'Tabcin'}) set n.Enfermedad='Influenza'
+create(n:Medicina {Nombre:'Loperamida'})
+match(n:Medicina{Nombre:'Loperamida'}) set n.Precio='Q30.00'
+match(n:Medicina{Nombre:'Loperamida'}) set n.Ingestion='2 veces al dia'
+match(n:Medicina{Nombre:'Loperamida'}) set n.NotasAD=' '
+match(n:Medicina{Nombre:'Loperamida'}) set n.Enfermedad='IntoxicacionAlimentaria'
+create(n:Medicina {Nombre:'Eritropoyetina'})
+match(n:Medicina{Nombre:'Eritropoyetina'}) set n.Precio='Q40.00'
+match(n:Medicina{Nombre:'Eritropoyetina'}) set n.Ingestion='Antes de cada comida'
+match(n:Medicina{Nombre:'Eritropoyetina'}) set n.NotasAD=' '
+match(n:Medicina{Nombre:'Eritropoyetina'}) set n.Enfermedad='Anemia'
+create(n:Medicina {Nombre:'Penicilina'})
+match(n:Medicina{Nombre:'Penicilina'}) set n.Precio='Q80.00'
+match(n:Medicina{Nombre:'Penicilina'}) set n.Ingestion='Inyectada por un medico'
+match(n:Medicina{Nombre:'Penicilina'}) set n.NotasAS=' '
+match(n:Medicina{Nombre:'Penicilina'}) set n.Enfermedad='Neumonia'
+create (n:Enfermedad {Nombre:'Rinitisalergica'})
+create (n:Enfermedad {Nombre:'Bronquitis'})
+create (n:Enfermedad {Nombre:'Gastritis'})
+create (n:Enfermedad {Nombre:'Paperas'})
+create (n:Enfermedad {Nombre:'Rotavirus'})
+create (n:Enfermedad {Nombre:'Covid19'})
+create (n:Enfermedad {Nombre:'Varicela'})
+create (n:Enfermedad {Nombre:'Dengue'})
+create (n:Enfermedad {Nombre:'Fiebre tifoidea'})
+create (n:Enfermedad {Nombre:'Malaria'})
+create (n:Enfermedad {Nombre:'Tuberculosis'})
+match(n:Enfermedad {Nombre:'Rinitisalergica'}) set n.Nombre='Rinitis alergica'
+match(n:Enfermedad {Nombre:'IntoxicacionAlimentaria'}) set n.Nombre='Intoxicacion alimentaria'
+match(n:Medicina{Nombre:'Loperamida'}) set n.Enfermedad='Intoxicacion alimentaria'
+match(n:Enfermedad {Nombre:'Covid19'}) set n.Nombre='Covid-19'
+match(n:Enfermedad {Nombre:'Rinitis alergica'}) set n.DolorCabeza='Si'
+match(n:Enfermedad {Nombre:'Rinitis alergica'}) set n.DolorEstomago='No'
+match(n:Enfermedad {Nombre:'Rinitis alergica'}) set n.Vomito='No'
+match(n:Enfermedad {Nombre:'Rinitis alergica'}) set n.Diarrea='No'
+match(n:Enfermedad {Nombre:'Rinitis alergica'}) set n.Estornudo='Si'
+match(n:Enfermedad {Nombre:'Rinitis alergica'}) set n.Tos='No'
+match(n:Enfermedad {Nombre:'Rinitis alergica'}) set n.DolorGeneral='No'
+match(n:Enfermedad {Nombre:'Rinitis alergica'}) set n.FaltaEnergia='No'
+match(n:Enfermedad {Nombre:'Rinitis alergica'}) set n.NotasAD=' '
+match(n:Enfermedad {Nombre:'Rinitis alergica'}) set n.Medicina='Allegra'
+match(n:Enfermedad {Nombre:'Bronquitis'}) set n.DolorCabeza='Si'
+match(n:Enfermedad {Nombre:'Bronquitis'}) set n.DolorEstomago='No'
+match(n:Enfermedad {Nombre:'Bronquitis'}) set n.Vomito='No'
+match(n:Enfermedad {Nombre:'Bronquitis'}) set n.Diarrea='No'
+match(n:Enfermedad {Nombre:'Bronquitis'}) set n.Estornudo='No'
+match(n:Enfermedad {Nombre:'Bronquitis'}) set n.Tos='Si'
+match(n:Enfermedad {Nombre:'Bronquitis'}) set n.DolorGeneral='No'
+match(n:Enfermedad {Nombre:'Bronquitis'}) set n.FaltaEnergia='Si'
+match(n:Enfermedad {Nombre:'Bronquitis'}) set n.NotasAD=' '
+match(n:Enfermedad {Nombre:'Bronquitis'}) set n.Medicina='Paracetamol'
+match(n:Enfermedad {Nombre:'Rinitis alergica'}) set n.Natural=' '
+match(n:Enfermedad {Nombre:'Bronquitis'}) set n.Natural='Te de pimienta con miel'
+match(n:Enfermedad {Nombre:'Gastritis'}) set n.DolorCabeza='No'
+match(n:Enfermedad {Nombre:'Gastritis'}) set n.DolorEstomago='Si'
+match(n:Enfermedad {Nombre:'Gastritis'}) set n.Vomito='Si'
+match(n:Enfermedad {Nombre:'Gastritis'}) set n.Diarrea='No'
+match(n:Enfermedad {Nombre:'Gastritis'}) set n.Estornudo='No'
+match(n:Enfermedad {Nombre:'Gastritis'}) set n.Tos='No'
+match(n:Enfermedad {Nombre:'Gastritis'}) set n.DolorGeneral='No'
+match(n:Enfermedad {Nombre:'Gastritis'}) set n.FaltaEnergia='No'
+match(n:Enfermedad {Nombre:'Gastritis'}) set n.NotasAD=' '
+match(n:Enfermedad {Nombre:'Gastritis'}) set n.Medicia='Penicilina'
+match(n:Enfermedad {Nombre:'Gastritis'}) set n.Natural='Te verde con miel'
+match(n:Enfermedad {Nombre:'Paperas'}) set n.DolorCabeza='Si'
+match(n:Enfermedad {Nombre:'Paperas'}) set n.DolorEstomago='No'
+match(n:Enfermedad {Nombre:'Paperas'}) set n.Vomito='No'
+match(n:Enfermedad {Nombre:'Paperas'}) set n.Diarrea='No'
+match(n:Enfermedad {Nombre:'Paperas'}) set n.Estornudo='No'
+match(n:Enfermedad {Nombre:'Paperas'}) set n.Tos='No'
+match(n:Enfermedad {Nombre:'Paperas'}) set n.DolorGeneral='No'
+match(n:Enfermedad {Nombre:'Paperas'}) set n.FaltaEnergia='Si'
+match(n:Enfermedad {Nombre:'Paperas'}) set n.NotasAD=' '
+match(n:Enfermedad {Nombre:'Paperas'}) set n.Medicina='Tylenol'
+match(n:Enfermedad {Nombre:'Paperas'}) set n.Natural='Gargaras de te de manzanilla, compresa de sabila'
+match(n:Enfermedad {Nombre:'Rotavirus'}) set n.DolorCabeza='Si'
+match(n:Enfermedad {Nombre:'Rotavirus'}) set n.DolorEstomago='Si'
+match(n:Enfermedad {Nombre:'Rotavirus'}) set n.Vomito='Si'
+match(n:Enfermedad {Nombre:'Rotavirus'}) set n.Diarrea='Si'
+match(n:Enfermedad {Nombre:'Rotavirus'}) set n.Estornudo='No'
+match(n:Enfermedad {Nombre:'Rotavirus'}) set n.Tos='No'
+match(n:Enfermedad {Nombre:'Rotavirus'}) set n.DolorGeneral='No'
+match(n:Enfermedad {Nombre:'Rotavirus'}) set n.FaltaEnergia='Si'
+match(n:Enfermedad {Nombre:'Rotavirus'}) set n.NotasAD='No hay un medicamento especifico para tratar las enfermedades por rotavirus'
+match(n:Enfermedad {Nombre:'Rotavirus'}) set n.Medicina='- '
+match(n:Enfermedad {Nombre:'Rotavirus'}) set n.Natural='Hidratacion continua'
+match(n:Enfermedad {Nombre:'Covid-19'}) set n.DolorCabeza='Si'
+match(n:Enfermedad {Nombre:'Covid-19'}) set n.DolorEstomago='No'
+match(n:Enfermedad {Nombre:'Covid-19'}) set n.Vomito='No'
+match(n:Enfermedad {Nombre:'Covid-19'}) set n.Diarrea='No'
+match(n:Enfermedad {Nombre:'Covid-19'}) set n.Estornudo='No'
+match(n:Enfermedad {Nombre:'Covid-19'}) set n.Tos='Si'
+match(n:Enfermedad {Nombre:'Covid-19'}) set n.DolorGeneral='No'
+match(n:Enfermedad {Nombre:'Covid-19'}) set n.FaltaEnergia='Si'
+match(n:Enfermedad {Nombre:'Covid-19'}) set n.NotasAD='No hay medicamento especifico para el tratamiento del covid-19'
+match(n:Enfermedad {Nombre:'Covid-19'}) set n.Medicina='-'
+match(n:Enfermedad {Nombre:'Covid-19'}) set n.Natural='Descanso, hidratacion'
+match(n:Enfermedad {Nombre:'Varicela'}) set n.DolorCabeza='Si'
+match(n:Enfermedad {Nombre:'Varicela'}) set n.DolorEstomago='No'
+match(n:Enfermedad {Nombre:'Varicela'}) set n.Vomito='No'
+match(n:Enfermedad {Nombre:'Varicela'}) set n.Diarrea='No'
+match(n:Enfermedad {Nombre:'Varicela'}) set n.Estornudo='No'
+match(n:Enfermedad {Nombre:'Varicela'}) set n.Tos='No'
+match(n:Enfermedad {Nombre:'Varicela'}) set n.DolorGeneral='No'
+match(n:Enfermedad {Nombre:'Varicela'}) set n.FaltaEnergia='Si'
+match(n:Enfermedad {Nombre:'Varicela'}) set n.NotasAD='Se presenta un zarpullido'
+match(n:Enfermedad {Nombre:'Varicela'}) set n.Medicina='Paracetamol'
+match(n:Enfermedad {Nombre:'Varicela'}) set n.Natural='Bano de avena'
+match(n:Enfermedad {Nombre:'Dengue'}) set n.DolorCabeza='Si'
+match(n:Enfermedad {Nombre:'Dengue'}) set n.DolorEstomago='No'
+match(n:Enfermedad {Nombre:'Dengue'}) set n.Vomito='Si'
+match(n:Enfermedad {Nombre:'Dengue'}) set n.Diarrea='No'
+match(n:Enfermedad {Nombre:'Dengue'}) set n.Estornudo='No'
+match(n:Enfermedad {Nombre:'Dengue'}) set n.Tos='No'
+match(n:Enfermedad {Nombre:'Dengue'}) set n.DolorGeneral='Si'
+match(n:Enfermedad {Nombre:'Dengue'}) set n.FaltaEnergia='Si'
+match(n:Enfermedad {Nombre:'Dengue'}) set n.NotasAD=' '
+match(n:Enfermedad {Nombre:'Dengue'}) set n.Medicina='Tylenol'
+match(n:Enfermedad {Nombre:'Dengue'}) set n.Natural='Ingestion de liquidos, reposo'
+match(n:Enfermedad {Nombre:'Fiebre tifoidea'}) set n.DolorCabeza='Si'
+match(n:Enfermedad {Nombre:'Fiebre tifoidea'}) set n.DolorEstomago='Si'
+match(n:Enfermedad {Nombre:'Fiebre tifoidea'}) set n.Vomito='No'
+match(n:Enfermedad {Nombre:'Fiebre tifoidea'}) set n.Diarrea='Si'
+match(n:Enfermedad {Nombre:'Fiebre tifoidea'}) set n.Estornudo='No'
+match(n:Enfermedad {Nombre:'Fiebre tifoidea'}) set n.Tos='No'
+match(n:Enfermedad {Nombre:'Fiebre tifoidea'}) set n.DolorGeneral='No'
+match(n:Enfermedad {Nombre:'Fiebre tifoidea'}) set n.FaltaEnergia='Si'
+match(n:Enfermedad {Nombre:'Fiebre tifoidea'}) set n.NotasAD=' '
+match(n:Enfermedad {Nombre:'Fiebre tifoidea'}) set n.Medicina='Penicilina'
+match(n:Enfermedad {Nombre:'Fiebre tifoidea'}) set n.Natural='Hidratacion'
+match(n:Enfermedad {Nombre:'Malaria'}) set n.DolorCabeza='Si'
+match(n:Enfermedad {Nombre:'Malaria'}) set n.DolorEstomago='No'
+match(n:Enfermedad {Nombre:'Malaria'}) set n.Vomito='No'
+match(n:Enfermedad {Nombre:'Malaria'}) set n.Diarrea='Si'
+match(n:Enfermedad {Nombre:'Malaria'}) set n.Estornudo='No'
+match(n:Enfermedad {Nombre:'Malaria'}) set n.Tos='No'
+match(n:Enfermedad {Nombre:'Malaria'}) set n.DolorGeneral='No'
+match(n:Enfermedad {Nombre:'Malaria'}) set n.FaltaEnergia='No'
+match(n:Enfermedad {Nombre:'Malaria'}) set n.NotasAD='Sudor y confusion'
+match(n:Enfermedad {Nombre:'Malaria'}) set n.Medicina='Malarone'
+match(n:Enfermedad {Nombre:'Malaria'}) set n.Natural='Reposo'
+match(n:Enfermedad {Nombre:'Tuberculosis'}) set n.DolorCabeza='No'
+match(n:Enfermedad {Nombre:'Tuberculosis'}) set n.DolorEstomago='No'
+match(n:Enfermedad {Nombre:'Tuberculosis'}) set n.Vomito='No'
+match(n:Enfermedad {Nombre:'Tuberculosis'}) set n.Diarrea='No'
+match(n:Enfermedad {Nombre:'Tuberculosis'}) set n.Estornudo='No'
+match(n:Enfermedad {Nombre:'Tuberculosis'}) set n.Tos='Si'
+match(n:Enfermedad {Nombre:'Tuberculosis'}) set n.DolorGeneral='No'
+match(n:Enfermedad {Nombre:'Tuberculosis'}) set n.FaltaEnergia='No'
+match(n:Enfermedad {Nombre:'Tuberculosis'}) set n.NotasAD='Perdida de peso, flema, sudores'
+match(n:Enfermedad {Nombre:'Tuberculosis'}) set n.Medicina='Isoniazida INH'
+match(n:Enfermedad {Nombre:'Tuberculosis'}) set n.Natural='Reposo'
+create (n:Medicina {Nombre:'Allegra'})
+create (n:Medicina {Nombre:'Tylenol'})
+create (n:Medicina {Nombre:'Malarone'})
+create (n:Medicina {Nombre:'Isoniazida INH'})
+match(n:Medicina {Nombre:'Allegra'}) set n.Precio='Q18.00'
+match(n:Medicina {Nombre:'Allegra'}) set n.Ingestion='3 veces al dia'
+match(n:Medicina {Nombre:'Allegra'}) set n.NotasAD=' '
+match(n:Medicina {Nombre:'Allegra'}) set n.Enfermedad='Rinitis alergica '
+match(n:Medicina {Nombre:'Tylenol'}) set n.Precio='Q15.00'
+match(n:Medicina {Nombre:'Tylenol'}) set n.Ingestion='3 veces al dia'
+match(n:Medicina {Nombre:'Tylenol'}) set n.NotasAD=' '
+match(n:Medicina {Nombre:'Tylenol'}) set n.Enfermedad='Paperas, Dengue'
+match(n:Medicina {Nombre:'Ceftriaxona'}) set n.Precio='Q90.00'
+match(n:Medicina {Nombre:'Ceftriaxona'}) set n.Ingestion='Seguir indicaciones del medico'
+match(n:Medicina {Nombre:'Ceftriaxona'}) set n.NotasAD=' '
+match(n:Medicina {Nombre:'Ceftriaxona'}) set n.Enfermedad='Fiebre tifoidea'
+match(n:Medicina {Nombre:'Malarone'}) set n.Precio='Q250.00'
+match(n:Medicina {Nombre:'Malarone'}) set n.Ingestion='Seguir indicaciones del medico'
+match(n:Medicina {Nombre:'Malarone'}) set n.NotasAD=' '
+match(n:Medicina {Nombre:'Malarone'}) set n.Enfermedad='Malaria'
+match(n:Medicina {Nombre:'Isoniazida INH'}) set n.Precio='Q90.00'
+match(n:Medicina {Nombre:'Isoniazida INH'}) set n.Ingestion='Seguir indicaciones del medico'
+match(n:Medicina {Nombre:'Isoniazida INH'}) set n.NotasAD=' '
+match(n:Medicina {Nombre:'Isoniazida INH'}) set n.Enfermedad='Tuberculosis'
+match(n:Medicina {Nombre:'Paracetamol'}) set n.Enfermedad='Migrana, Bronquitis, Varicela'
+match(n:Medicina {Nombre:'Penicilina'}) set n.Enfermedad='Neumonia, Gastritis'
+match (a:Enfermedad {Nombre:'Fiebre tifoidea'}),(b:Medicina {Nombre:'Penicilina'}) merge (a)-[r:Diarrea]->(b)
+match (a:Enfermedad {Nombre:'Fiebre tifoidea'}),(b:Medicina {Nombre:'Penicilina'}) merge (a)-[r:DolorCabeza]->(b)
+match (a:Enfermedad {Nombre:'Fiebre tifoidea'}),(b:Medicina {Nombre:'Penicilina'}) merge (a)-[r:DolorEstomago]->(b)
+match (a:Enfermedad {Nombre:'Fiebre tifoidea'}),(b:Medicina {Nombre:'Penicilina'}) merge (a)-[r:FaltaEnergia]->(b)
+match (a:Enfermedad {Nombre:'Dengue'}),(b:Medicina {Nombre:'Tylenol'}) merge (a)-[r:FaltaEnergia]->(b)
+match (a:Enfermedad {Nombre:'Dengue'}),(b:Medicina {Nombre:'Tylenol'}) merge (a)-[r:Vomito]->(b)
+match (a:Enfermedad {Nombre:'Dengue'}),(b:Medicina {Nombre:'Tylenol'}) merge (a)-[r:DolorCabeza]->(b)
+match (a:Enfermedad {Nombre:'Dengue'}),(b:Medicina {Nombre:'Tylenol'}) merge (a)-[r:DolorGeneral]->(b)
+match (a:Enfermedad {Nombre:'Malaria'}),(b:Medicina {Nombre:'Malarone'}) merge (a)-[r:DolorCabeza]->(b)
+match (a:Enfermedad {Nombre:'Malaria'}),(b:Medicina {Nombre:'Malarone'}) merge (a)-[r:Diarrea]->(b)
+match (a:Enfermedad {Nombre:'Influenza'}),(b:Medicina {Nombre:'Tabcin'}) merge (a)-[r:DolorCabeza]->(b)
+match (a:Enfermedad {Nombre:'Influenza'}),(b:Medicina {Nombre:'Tabcin'}) merge (a)-[r:Estornudo]->(b)
+match (a:Enfermedad {Nombre:'Influenza'}),(b:Medicina {Nombre:'Tabcin'}) merge (a)-[r:FaltaEnergia]->(b)
+match (a:Enfermedad {Nombre:'Influenza'}),(b:Medicina {Nombre:'Tabcin'}) merge (a)-[r:Tos]->(b)
+match (a:Enfermedad {Nombre:'Neumonia'}),(b:Medicina {Nombre:'Penicilina'}) merge (a)-[r:Tos]->(b)
+match (a:Enfermedad {Nombre:'Neumonia'}),(b:Medicina {Nombre:'Penicilina'}) merge (a)-[r:FaltaEnergia]->(b)
+match (a:Enfermedad {Nombre:'Neumonia'}),(b:Medicina {Nombre:'Penicilina'}) merge (a)-[r:Estornudo]->(b)
+match (a:Enfermedad {Nombre:'Rinitis alergica'}),(b:Medicina {Nombre:'Allegra'}) merge (a)-[r:Estornudo]->(b)
+match (a:Enfermedad {Nombre:'Rinitis alergica'}),(b:Medicina {Nombre:'Allegra'}) merge (a)-[r:DolorCabeza]->(b)
+match (a:Enfermedad {Nombre:'Bronquitis'}),(b:Medicina {Nombre:'Paracetamol'}) merge (a)-[r:DolorCabeza]->(b)
+match (a:Enfermedad {Nombre:'Bronquitis'}),(b:Medicina {Nombre:'Paracetamol'}) merge (a)-[r:Tos]->(b)
+match (a:Enfermedad {Nombre:'Bronquitis'}),(b:Medicina {Nombre:'Paracetamol'}) merge (a)-[r:FaltaEnergia]->(b)
+match (a:Enfermedad {Nombre:'Anemia'}),(b:Medicina {Nombre:'Eritropoyetina'}) merge (a)-[r:FaltaEnergia]->(b)
+match (a:Enfermedad {Nombre:'Anemia'}),(b:Medicina {Nombre:'Eritropoyetina'}) merge (a)-[r:DolorCabeza]->(b)
+match (a:Enfermedad {Nombre:'Intoxicacion alimentaria'}),(b:Medicina {Nombre:'Loperamida'}) merge (a)-[r:DolorEstomago]->(b)
+match (a:Enfermedad {Nombre:'Intoxicacion alimentaria'}),(b:Medicina {Nombre:'Loperamida'}) merge (a)-[r:Diarrea]->(b)
+match (a:Enfermedad {Nombre:'Intoxicacion alimentaria'}),(b:Medicina {Nombre:'Loperamida'}) merge (a)-[r:FaltaEnergia]->(b)
+match (a:Enfermedad {Nombre:'Intoxicacion alimentaria'}),(b:Medicina {Nombre:'Loperamida'}) merge (a)-[r:Vomito]->(b)
+match (a:Enfermedad {Nombre:'Migrana'}),(b:Medicina {Nombre:'Paracetamol'}) merge (a)-[r:Vomito]->(b)
+match (a:Enfermedad {Nombre:'Migrana'}),(b:Medicina {Nombre:'Paracetamol'}) merge (a)-[r:FaltaEnergia]->(b)
+match (a:Enfermedad {Nombre:'Migrana'}),(b:Medicina {Nombre:'Paracetamol'}) merge (a)-[r:DolorCabeza]->(b)
+match (a:Enfermedad {Nombre:'Tuberculosis'}),(b:Medicina {Nombre:'Isoniazida INH'}) merge (a)-[r:Tos]->(b)
+match (a:Enfermedad {Nombre:'Varicela'}),(b:Medicina {Nombre:'Paracetamol'}) merge (a)-[r:DolorCabeza]->(b)
+match (a:Enfermedad {Nombre:'Varicela'}),(b:Medicina {Nombre:'Paracetamol'}) merge (a)-[r:FaltaEnergia]->(b)
+match (a:Enfermedad {Nombre:'Paperas'}),(b:Medicina {Nombre:'Tylenol'}) merge (a)-[r:FaltaEnergia]->(b)
+match (a:Enfermedad {Nombre:'Paperas'}),(b:Medicina {Nombre:'Tylenol'}) merge (a)-[r:DolorCabeza]->(b)
+match (a:Enfermedad {Nombre:'Gastritis'}),(b:Medicina {Nombre:'Penicilina'}) merge (a)-[r:DolorEstomago]->(b)
+match (a:Enfermedad {Nombre:'Gastritis'}),(b:Medicina {Nombre:'Penicilina'}) merge (a)-[r:Vomito]->(b)
+match (a:Enfermedad {Nombre:'Fiebre tifoidea'}),(b:Enfermedad {Nombre:'Dengue'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Fiebre tifoidea'}),(b:Enfermedad {Nombre:'Malaria'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Fiebre tifoidea'}),(b:Enfermedad {Nombre:'Influenza'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Fiebre tifoidea'}),(b:Enfermedad {Nombre:'Rinitis alergica'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Fiebre tifoidea'}),(b:Enfermedad {Nombre:'Bronquitis'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Fiebre tifoidea'}),(b:Enfermedad {Nombre:'Anemia'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Fiebre tifoidea'}),(b:Enfermedad {Nombre:'Migrana'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Fiebre tifoidea'}),(b:Enfermedad {Nombre:'Varicela'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Fiebre tifoidea'}),(b:Enfermedad {Nombre:'Covid-19'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Fiebre tifoidea'}),(b:Enfermedad {Nombre:'Rotavirus'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Fiebre tifoidea'}),(b:Enfermedad {Nombre:'Paperas'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Dengue'}),(b:Enfermedad {Nombre:'Malaria'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Dengue'}),(b:Enfermedad {Nombre:'Influenza'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Dengue'}),(b:Enfermedad {Nombre:'Rinitis alergica'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Dengue'}),(b:Enfermedad {Nombre:'Bronquitis'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Dengue'}),(b:Enfermedad {Nombre:'Anemia'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Dengue'}),(b:Enfermedad {Nombre:'Migrana'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Dengue'}),(b:Enfermedad {Nombre:'Varicela'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Dengue'}),(b:Enfermedad {Nombre:'Covid-19'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Dengue'}),(b:Enfermedad {Nombre:'Rotavirus'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Dengue'}),(b:Enfermedad {Nombre:'Paperas'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Malaria'}),(b:Enfermedad {Nombre:'Influenza'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Malaria'}),(b:Enfermedad {Nombre:'Rinitis alergica'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Malaria'}),(b:Enfermedad {Nombre:'Bronquitis'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Malaria'}),(b:Enfermedad {Nombre:'Anemia'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Malaria'}),(b:Enfermedad {Nombre:'Migrana'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Malaria'}),(b:Enfermedad {Nombre:'Varicela'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Malaria'}),(b:Enfermedad {Nombre:'Covid-19'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Malaria'}),(b:Enfermedad {Nombre:'Rotavirus'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Malaria'}),(b:Enfermedad {Nombre:'Paperas'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Influenza'}),(b:Enfermedad {Nombre:'Rinitis alergica'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Influenza'}),(b:Enfermedad {Nombre:'Bronquitis'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Influenza'}),(b:Enfermedad {Nombre:'Anemia'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Influenza'}),(b:Enfermedad {Nombre:'Migrana'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Influenza'}),(b:Enfermedad {Nombre:'Varicela'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Influenza'}),(b:Enfermedad {Nombre:'Covid-19'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Influenza'}),(b:Enfermedad {Nombre:'Rotavirus'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Influenza'}),(b:Enfermedad {Nombre:'Paperas'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Rinitis alergica'}),(b:Enfermedad {Nombre:'Bronquitis'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Rinitis alergica'}),(b:Enfermedad {Nombre:'Anemia'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Rinitis alergica'}),(b:Enfermedad {Nombre:'Migrana'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Rinitis alergica'}),(b:Enfermedad {Nombre:'Varicela'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Rinitis alergica'}),(b:Enfermedad {Nombre:'Covid-19'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Rinitis alergica'}),(b:Enfermedad {Nombre:'Rotavirus'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Rinitis alergica'}),(b:Enfermedad {Nombre:'Paperas'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Bronquitis'}),(b:Enfermedad {Nombre:'Anemia'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Bronquitis'}),(b:Enfermedad {Nombre:'Migrana'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Bronquitis'}),(b:Enfermedad {Nombre:'Varicela'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Bronquitis'}),(b:Enfermedad {Nombre:'Covid-19'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Bronquitis'}),(b:Enfermedad {Nombre:'Rotavirus'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Bronquitis'}),(b:Enfermedad {Nombre:'Paperas'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Anemia'}),(b:Enfermedad {Nombre:'Migrana'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Anemia'}),(b:Enfermedad {Nombre:'Varicela'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Anemia'}),(b:Enfermedad {Nombre:'Covid-19'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Anemia'}),(b:Enfermedad {Nombre:'Rotavirus'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Anemia'}),(b:Enfermedad {Nombre:'Paperas'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Migrana'}),(b:Enfermedad {Nombre:'Varicela'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Migrana'}),(b:Enfermedad {Nombre:'Covid-19'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Migrana'}),(b:Enfermedad {Nombre:'Rotavirus'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Migrana'}),(b:Enfermedad {Nombre:'Paperas'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Varicela'}),(b:Enfermedad {Nombre:'Covid-19'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Varicela'}),(b:Enfermedad {Nombre:'Rotavirus'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Varicela'}),(b:Enfermedad {Nombre:'Paperas'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Covid-19'}),(b:Enfermedad {Nombre:'Rotavirus'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Covid-19'}),(b:Enfermedad {Nombre:'Paperas'}) merge (a)-[r:DolorCabeza]-(b)
+match (a:Enfermedad {Nombre:'Rotavirus'}),(b:Enfermedad {Nombre:'Paperas'}) merge (a)-[r:DolorCabeza]-(b)

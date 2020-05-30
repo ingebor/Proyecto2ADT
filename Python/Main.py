@@ -1,5 +1,6 @@
 import ConexionBD as cb
 
+#cb.adAll()
 
 DictEnf = {}
 DictEnf = cb.Enfdict()

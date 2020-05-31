@@ -1,6 +1,6 @@
 #Universidad del Valle de Guatemala
 #Proyecto No. 2, sistema de recomendacion. Algoritmos y estructura de datos
-#Andres Say 19705, Ayleen Rubio 19003, 19214
+#Andres Say 19705, Ayleen Rubio 19003, Daniela Batz 19214
 import ConexionBD as cb
 
 

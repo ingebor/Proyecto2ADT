@@ -48,19 +48,19 @@ while flag:
                         while flagMenuAdmin:
                             opAdmin = input("\n¿Que desea realizar?\n1. Agregar un medicamento\n2. Agregar una enfermedad\n3. Eliminar un medicamento \n4. Eliminar una enfermedad\n5. Agregar una relacion \n6. Agregar un atributo (propiedad) \n7. Eliminar una relacion \n8. Eliminar un atributo\n9. Regresar al menu anterior\n10. Salir del programa\n")
                             if opAdmin=="1":
-                                Medicamento = input("Ingrese el nombre del medicamento: ")
+                                Medicamento = input("Ingrese el nombre del medicamento: ").capitalize()
                                 med = "'"+Medicamento+"'"
                                 try:
                                     cb.agregarMed(med)
-                                    print("-Se ha cargado correctamente")
+                                    print("-Se ha cargado correctamente, revise la base de datos")
                                 except:
                                     print("-La conexion a la base de datos tiene un problema, intentelo de nuevo por favor")
                             elif opAdmin=="2":
-                                Enfermedad = input("Ingrese el nombre de la enfermedad: ")
+                                Enfermedad = input("Ingrese el nombre de la enfermedad: ").capitalize()
                                 enfer = "'"+Enfermedad+"'"
                                 try:
                                     cb.agregarEnf(enfer)
-                                    print("-Se ha cargado correctamente")
+                                    print("-Se ha cargado correctamente, revise la base de datos")
                                 except:
                                     print("-La conexion a la base de datos tiene un problema, intentelo de nuevo por favor")
                             elif opAdmin=="3":
@@ -68,7 +68,7 @@ while flag:
                                 deleteDrug = "'"+drug+"'"
                                 try:
                                     cb.eliminarMed(deleteDrug)
-                                    print("Se ha eliminado correctamente")
+                                    print("Se ha eliminado correctamente, revise la base de datos")
                                 except:
                                     print("-Ha ingresado algo incorrecto, intentelo de nuevo por favor")
                             elif opAdmin=="4":
@@ -76,61 +76,61 @@ while flag:
                                 deleteEnf = "'"+Enfermedads+"'"
                                 try:
                                     cb.eliminarEnf(deleteEnf)
-                                    print("Se ha eliminado correctamente")
+                                    print("Se ha eliminado correctamente, revise la base de datos")
                                 except:
                                     print("-Ha ingresado algo incorrecto, intentelo de nuevo por favor")
                             elif opAdmin == "5":
                                 print("Ingrese a continuacion el tipo nodo que desea relacionar")
-                                op1 = input("nodo 1: ")
-                                op2 = input("nodo 2: ")
+                                op1 = input("nodo 1: ").capitalize()
+                                op2 = input("nodo 2: ").capitalize()
                                 print("Ingrese a continuacion los nombres los nodos")
-                                nombre1 = input("nombre1: ")
-                                nombre2 = input("nombre2: ")
+                                nombre1 = input("nombre1: ").capitalize()
+                                nombre2 = input("nombre2: ").capitalize()
                                 print("Ingrese el nombre de la relacion que desea colocar")
                                 relacion = input("Ingrese la relacion: ")
                                 nombre1F = "'"+nombre1+"'"
                                 nombre2F = "'"+nombre2+"'"
                                 try:
                                     cb.agregarRelacion(op1,op2,nombre1F,nombre2F,relacion)
-                                    print("Se ha creado la relacion correctamente")
+                                    print("Se ha creado la relacion correctamente, revise la base de datos")
                                 except:
                                     print("-Ha ingresado algo incorrecto, intentelo de nuevo por favor")
                             elif opAdmin == "6":
-                                nodo = input("Ingreso el tipo de nodo: ")
-                                nombre = input("Ingrese el nombre del nodo: ")
-                                atributo = input("Ingrese el tipo de atributo que desea colocar: ")
-                                valor = input("Ingrese el nombre del valor que desea colocar a ese atributo: ")
+                                nodo = input("Ingreso el tipo de nodo: ").capitalize()
+                                nombre = input("Ingrese el nombre del nodo: ").capitalize()
+                                atributo = input("Ingrese el tipo de atributo que desea colocar: ").capitalize()
+                                valor = input("Ingrese el nombre del valor que desea colocar a ese atributo: ").capitalize()
                                 nombreF = "'"+nombre+"'"
                                 valorF = "'"+valor+"'"
                                 try:
                                     cb.agregarA(nodo,nombreF,atributo,valorF)
-                                    print("Se ha cargado correctamente")
+                                    print("Se ha cargado correctamente, revise la base de datos")
                                 except:
                                     print("-Ha ingresado algo mal, intentelo de nuevo por favor")
                             elif opAdmin == "7":
                                 print("Ingrese a continuacion el tipo nodos en donde eliminara una relacion")
-                                op1 = input("nodo 1: ")
-                                op2 = input("nodo 2: ")
+                                op1 = input("nodo 1: ").capitalize()
+                                op2 = input("nodo 2: ").capitalize()
                                 print("Ingrese a continuacion los nombres los nodos")
-                                nombre1 = input("nombre1: ")
-                                nombre2 = input("nombre2: ")
+                                nombre1 = input("nombre1: ").capitalize()
+                                nombre2 = input("nombre2: ").capitalize()
                                 print("Ingrese la relacion que desea eliminar: ")
-                                relacion = input("Ingrese la relacion: ")
+                                relacion = input("Ingrese la relacion: ").capitalize()
                                 nombre1F = "'"+nombre1+"'"
                                 nombre2F = "'"+nombre2+"'"
                                 try:
                                     cb.deleteR(op1,op2,nombre1F,nombre2F,relacion)
-                                    print("Se ha eliminado correctamente")
+                                    print("Se ha eliminado correctamente, revise la base de datos")
                                 except:
                                     print("-Ha ingresado algo mal, intentelo de nuevo por favor")
                             elif opAdmin == "8":
-                                nodo = input("Ingreso el tipo de nodo: ")
-                                nombre = input("Ingrese el nombre del nodo: ")
-                                atributo = input("Ingrese el atributo que desea eliminar: ")
+                                nodo = input("Ingreso el tipo de nodo: ").capitalize()
+                                nombre = input("Ingrese el nombre del nodo: ").capitalize()
+                                atributo = input("Ingrese el atributo que desea eliminar: ").capitalize()
                                 nombreF = "'"+nombre+"'"
                                 try:
                                     cb.deleteA(nodo,nombreF,atributo)
-                                    print("Se ha eliminado correctamente")
+                                    print("Se ha eliminado correctamente, revise la base de datos")
                                 except:
                                     print("-Ha ingresado algo mal, intentelo de nuevo por favor")
                                 print("op8 e atributo")

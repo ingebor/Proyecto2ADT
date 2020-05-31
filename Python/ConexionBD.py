@@ -1,5 +1,5 @@
 from py2neo import Graph
-graph = Graph("http://neo4j:Andres9740@127.0.0.1:7474/db/data")
+graph = Graph("http://neo4j:pruebaADT@127.0.0.1:7474/db/data")
 #a
 #llenar un diccionario de enfermedades
 def Enfdict():

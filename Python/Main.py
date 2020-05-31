@@ -156,24 +156,28 @@ while flag:
             opUser = input("\n¿Que desea realizar?\n1. Deseo consultar los sintomas de cierta enfermedad\n2. Deseo conocer las especificaciones de un medicamento especifico\n"+
             "3. Cuento con sintomas y desconozco la razon, deseo ingresar mis sintomas\n4. Regresar al menu anterior\n5. Salir del programa\n")
             if opUser=="1":
+                DictEnf = cb.Enfdict()
                 userOp1 = True
                 while userOp1:
                     illName = input("Ingrese el nombre de la enfermedad por favor: ").capitalize()
                     try:
                         print("Los sintomas son los siguientes: ")
                         sintomas = cb.BuscaEnf(illName,DictEnf)
-                        print("->Diarrea: "+sintomas[0])
-                        print("->Dolor de Cabeza: "+sintomas[1])
-                        print("->Dolor de estomago: "+sintomas[2])
-                        print("->Congestion nasal: "+sintomas[3])
-                        print("->Dolor corporal: "+sintomas[4])
-                        print("->Cansancio, fatiga: "+sintomas[5])
-                        print("->Tos: "+sintomas[6])
-                        print("->Vomitos: "+sintomas[7])
-                        print("Para esta enfermedad se tienen las siguientes recomendaciones: ")
-                        print("->Datos importantes que deben tomarse en cuenta: "+sintomas[9])
-                        print("->Medicamento que puede aliviar los sintomas: "+sintomas[8])
-                        print("->Remedios naturales para aliviar los sintomas: "+sintomas[10])
+                        try:
+                            print("->Diarrea: "+sintomas[0])
+                            print("->Dolor de Cabeza: "+sintomas[1])
+                            print("->Dolor de estomago: "+sintomas[2])
+                            print("->Congestion nasal: "+sintomas[3])
+                            print("->Dolor corporal: "+sintomas[4])
+                            print("->Cansancio, fatiga: "+sintomas[5])
+                            print("->Tos: "+sintomas[6])
+                            print("->Vomitos: "+sintomas[7])
+                            print("Para esta enfermedad se tienen las siguientes recomendaciones: ")
+                            print("->Datos importantes que deben tomarse en cuenta: "+sintomas[9])
+                            print("->Medicamento que puede aliviar los sintomas: "+sintomas[8])
+                            print("->Remedios naturales para aliviar los sintomas: "+sintomas[10])
+                        except:
+                            print("\n--No ha ingresado todas las propiedades de esta enfermedad, recuerde que debe ingresar: diarrea, dolorCabeza, dolorEstomago, estornudo, dolorGeneral, faltaEnergia, tos, vomito, medicina, notasAD, natural--\n")
                         lastUserOp1 = True
                         while lastUserOp1:
                             inpUserOp1 = input("\nDesea:\n1. Regresar al menu anterior\n2. Salir del programa\n")
@@ -192,15 +196,19 @@ while flag:
                         print("\n--La enfermedad ingresada no se encuntra en la base de datos, lo sentimos. Intentelo de nuevo por favor--\n")
             elif opUser =="2":
                 userOp2 = True
+                dictMed = cb.Meddict()
                 while userOp2:
                     drugName = input("Ingrese el nombre del medicamento por favor: ").capitalize()
                     try:
                         print("Las especificaciones del medicamento son las siguientes: ")
                         medicamento = cb.BuscaMed(drugName,dictMed)
-                        print("->Tiene un precio de: "+medicamento[0])
-                        print("->El modo de ingestion es: "+medicamento[1])
-                        print("->Datos importantes que debe tomar en cuenta: "+medicamento[2])
-                        print("->La(s) enfermedad(es) para la(s) que es utilizada: " +medicamento[3])
+                        try:
+                            print("->Tiene un precio de: "+medicamento[0])
+                            print("->El modo de ingestion es: "+medicamento[1])
+                            print("->Datos importantes que debe tomar en cuenta: "+medicamento[2])
+                            print("->La(s) enfermedad(es) para la(s) que es utilizada: " +medicamento[3])
+                        except:
+                            print("\n--No ha ingresado todas las propiedades de este medicamento, recuerde que debe tener precio, notasAD y enfermedad--\n")
                         lastUserOp2 = True
                         while lastUserOp2:
                             inpUserOp2 = input("\nDesea:\n1. Regresar al menu anterior\n2. Salir del programa\n")
